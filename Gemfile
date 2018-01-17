@@ -40,7 +40,7 @@ gemspec
 # development
 #######################################
 #group :development do
-#  
+#
 #end
 
 
@@ -52,3 +52,5 @@ group :test do
   gem "jekyll-paginate"
   gem "redcarpet"
 end
+
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?

@@ -1,0 +1,8 @@
+---
+layout: default
+img: simple.png
+category: Services
+title: シンプルな画面構成<br>簡単に使える
+description: |
+---
+  デザインと使いやすさを徹底的に追及し、誰でも直感で使えるように心がけております。	

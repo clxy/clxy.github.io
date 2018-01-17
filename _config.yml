@@ -1,6 +1,7 @@
 title: KeepAccounts
 email: swalloworks@gmail.com
 author: Swalloworks Studio
+baseurl: ""
 description: >- # this means to ignore newlines until "baseurl:"
   家計簿 小遣い帳 かんたん 収支 レシート 支出 簡単 シンプル 便利 フリー マネー
   お金 管理 節約 kakeibo プロー free money expense spend 记账 账本.
@@ -8,8 +9,10 @@ url: "http://kakeibo.swalloworkstudio.com"
 
 # Build settings
 markdown: kramdown
-permalink: /:title/
+# permalink: /:title/
+permalink: pretty
 
+# Plugins
 plugins:
   - jekyll-multiple-languages-plugin
 
@@ -20,12 +23,7 @@ langs:
   zh_TW: 繁體中文
 # jekyll-multiple-languages-plugin settings:
 languages: ["en", "ja", "zh_CN", "zh_TW"]
-exclude_from_localizations:
-  - js
-  - fonts
-  - img
-  - css
-  - favicon.ico
+exclude_from_localizations: ["javascript", "images", "css", "scripts", "favicon.ico", "js", "img", "fonts"]
 
 social:
   - title: twitter
