@@ -1,3 +1,23 @@
-FAQ
-FAQ
-FAQ
+<div class="row">
+  <div class="col-xs-12 col-md-10 col-md-offset-1">
+      <div class="panel-group" id="accordion">
+        {% assign faqs = site.posts | where:"category", "FAQs" %}
+        {% for faq in faqs %}
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse{{forloop.index}}">
+                {{ faq.question }}
+              </a>
+            </h4>
+          </div>
+          <div id="collapse{{forloop.index}}" class="panel-collapse collapse">
+            <div class="panel-body">
+                {{ faq.content }}
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+  </div>
+</div>
