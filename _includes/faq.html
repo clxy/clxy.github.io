@@ -1,5 +1,6 @@
-<div class="row">
-  <div class="col-xs-12 col-md-10 col-md-offset-1">
+<section id="faqs">
+  <div class="row">
+    <div class="col-xs-12 col-md-10 col-md-offset-1">
       <div class="panel-group" id="accordion">
         {% assign faqs = site.posts | where:"category", "FAQs" %}
         {% for faq in faqs %}
@@ -13,11 +14,12 @@
           </div>
           <div id="collapse{{forloop.index}}" class="panel-collapse collapse">
             <div class="panel-body">
-                {{ faq.content }}
+              {{ faq.content }}
             </div>
           </div>
         </div>
         {% endfor %}
       </div>
+    </div>
   </div>
-</div>
+</section>
