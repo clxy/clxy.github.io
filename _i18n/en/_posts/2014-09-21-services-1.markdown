@@ -5,4 +5,4 @@ category: Services
 title: シンプルな画面構成<br>簡単に使える
 description: |
 ---
-  デザインと使いやすさを徹底的に追及し、誰でも直感で使えるように心がけております。	
+  We pursue design and ease of use thoroughly, we try to be able to use it by everyone intuition.

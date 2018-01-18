@@ -5,4 +5,4 @@ category: Services
 title: お客様の声
 description: |
 ---
-  毎日家計簿をご利用いただいているお客様の声をご紹介します。
+  用戶好評節選。

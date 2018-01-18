@@ -5,4 +5,4 @@ category: Services
 title: レシートを簡単に管理できる
 description: |
 ---
-  写真一枚でレシートの明細をしっかり残せます。
+  账单恒久远，照片永留传！
