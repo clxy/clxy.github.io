@@ -1,4 +1,10 @@
 global:
+  title: 'Pennyworth'
+  subtitle: 'Easy personal finance app for aggregation, budgeting and bills'
+  keywords: 'budget, expense, spend, account, bill, income, receipt, simple, 記帳, 记账, 家計簿, 가계부, family, easy, track, saving, money'
+
+content:
   about: 'About'
-  title: 'KeepAccounts'
-  keywords: 'iphone,ios,app,android,free,keep accounts,money,expense,spend,tracker,track,tracking'
+  features: 'Features'
+  contact: 'Contact'
+  faq: 'FAQ'

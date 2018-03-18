@@ -1,4 +1,10 @@
 global:
-  about: 'ご挨拶'
   title: '毎日家計簿'
-  keywords: 'iphone,ios,app,android,無料,家計簿,お金,簡単,シンプル,便利,フリー,マネー,お金,管理,節約'
+  subtitle: '無料、簡単、人気、続けられる家計簿'
+  keywords: '家計簿,かけいぼ,人気,無料,小遣い帳,かんたん,簡単,シンプル,記帳,収支,レシート,支出,管理,便利,フリー,マネー,お金,財布,kakeibo,かわいい,expense,spend,记账,主婦'
+
+content:
+  about: 'ご挨拶'
+  features: '特長'
+  contact: 'お問い合わせ'
+  faq: 'FAQ'
