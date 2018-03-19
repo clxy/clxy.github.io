@@ -4,7 +4,7 @@ global:
   keywords: 'budget, expense, spend, account, bill, income, receipt, simple, 記帳, 记账, 家計簿, 가계부, family, easy, track, saving, money'
 
 content:
-  home: 'Home'
+  home: 'Top'
   about: 'Greetings'
   features: 'Features'
   contact: 'Contact'
