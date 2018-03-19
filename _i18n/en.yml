@@ -4,7 +4,10 @@ global:
   keywords: 'budget, expense, spend, account, bill, income, receipt, simple, 記帳, 记账, 家計簿, 가계부, family, easy, track, saving, money'
 
 content:
-  about: 'About'
+  home: 'Home'
+  about: 'Greetings'
   features: 'Features'
   contact: 'Contact'
   faq: 'FAQ'
+  privacy: 'Privacy'
+  about_body: '<h2>Hi all</h2><br><p>Pennyworth is a personal finance app for aggregation, budgeting and bills.</p><p>Simple, full functionality, and completely FREE.</p><p>Pennyworth can help you just as well as helping Batman😃!</p><p> Thank you for your support!</p>'
