@@ -1,6 +1,6 @@
-* bundle not working!
 * use
 ````
+chcp 65001
 jekyll build --trace
 jekyll serve --trace
 ````
