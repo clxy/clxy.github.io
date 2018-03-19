@@ -10,4 +10,10 @@ content:
   contact: 'Contact'
   faq: 'FAQ'
   privacy: 'Privacy'
-  about_body: '<h2>Hi all</h2><br><p>Pennyworth is a personal finance app for aggregation, budgeting and bills.</p><p>Simple, full functionality, and completely FREE.</p><p>Pennyworth can help you just as well as helping Batman😃!</p><p> Thank you for your support!</p>'
+  about_body: |
+    <h2>Hello there!</h2>
+    <br>
+    <p>Pennyworth is a personal finance app for aggregation, budgeting and bills.</p>
+    <p>Simple, full functionality, and completely FREE.</p>
+    <p>Pennyworth can help you just as well as helping Batman! 😃</p>
+    <p> Thank you for your support!</p>
