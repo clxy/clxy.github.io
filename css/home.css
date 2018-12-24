@@ -1,0 +1,38 @@
+html {
+  font-size: 14px;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.intro-header {
+  margin-top: 55px;
+  padding-top: 180px;
+  color: #f8f8f8;
+  background: url(../img/intro-bg.jpg) no-repeat center left;
+  background-size: cover;
+  height: 530px;
+}
+
+.intro-header a {
+  color: #f8f8f8 !important
+}
+
+.card-deck .card {
+  min-width: 220px;
+}
+
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+  .intro-header {
+    height: 670px;
+  }
+}
