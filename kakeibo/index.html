@@ -20,7 +20,9 @@
 <body>
   <script src="/js/lang.js"></script>
   <script>
-    window.location.href = '/home/';
+    var lang = detectLang();
+    console.log(`detected:${lang}`)
+    changeLang(lang);
   </script>
 </body>
 

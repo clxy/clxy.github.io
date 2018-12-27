@@ -15,17 +15,40 @@ function detectLang() {
   var lang = (navigator.language || navigator.userLanguage).toLowerCase();
   var result = langMap[lang];
 
-  if(result) return result;
+  if (result) return result;
   lang = lang.split('-')[0];
   result = langMap[lang];
 
   return result || 'en';
 }
 
+/**
+ * https://domain/module/lang/ .split(/)
+ * https,,domain,module,lang ⇒ 语言是第五·个
+ */
+const LANG_INDEX = 4;
+function getUrlLang() {
+  var curLoc = window.location.href.split('/');
+  return curLoc[LANG_INDEX];
+}
+
 function changeLang(lang) {
   var curLoc = window.location.href.split('/');
-  var curLang = curLoc[3];
-  if(lang == curLang) return;
-  curLoc[3] = lang; // https://domain/lang/ ⇒ https,,domain,lang ⇒ 语言是第四个
+  var curLang = curLoc[LANG_INDEX];
+  if (lang == curLang) return;
+  curLoc[LANG_INDEX] = lang;
   window.location.href = curLoc.join('/');
 }
+
+$(function () {
+  $(window).ready(function () {
+    var curLang = getUrlLang();
+    $('#langSelect a')
+      .click(function () {
+        changeLang($(this).attr('data-lang'));
+      })
+      .addClass(function () {
+        return $(this).attr('data-lang') == curLang ? 'active' : '';
+      });
+  });
+});
