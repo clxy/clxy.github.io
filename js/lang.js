@@ -27,6 +27,7 @@ function detectLang() {
  * https,,domain,module,lang ⇒ 语言是第五·个
  */
 const LANG_INDEX = 4;
+
 function getUrlLang() {
   var curLoc = window.location.href.split('/');
   return curLoc[LANG_INDEX];
@@ -50,5 +51,6 @@ $(function () {
       .addClass(function () {
         return $(this).attr('data-lang') == curLang ? 'active' : '';
       });
+    $('#langDropdown').text($('#langSelect a.active').text());
   });
 });

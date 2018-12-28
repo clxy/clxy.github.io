@@ -1,0 +1,14 @@
+html {
+  font-size: 14px;
+}
+
+.container {
+  max-width: 960px;
+}
+
+/**
+ * for fixed-top
+ */
+body {
+  padding-top: 58px;
+}
