@@ -1,6 +1,4 @@
 .intro-header {
-  margin-top: 55px;
-  padding-top: 180px;
   color: #f8f8f8;
   background: url(../img/intro-bg.jpg) no-repeat center left;
   background-size: cover;
@@ -23,15 +21,16 @@
 @media (min-width: 576px) {}
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+}
 
+@media (min-width: 992px) {
   .intro-header {
-    height: 670px;
+    height: 580px;
   }
 }
 
-@media (min-width: 992px) {}
-
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+  .intro-header {
+    height: 780px;
+  }
+}
