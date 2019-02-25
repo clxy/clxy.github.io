@@ -8,8 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Clxy Studio">
   <meta name="author" content="Clxy Studio">
-  <meta name="keywords"
-    content="budget,expense,spend,account,bill,income,receipt,simple,financial,家計簿,小遣い帳,かんたん,収支,レシート,支出,簡単,シンプル,便利,無料,マネー記帳,记账,免费,家計簿,가계부">
+  <meta name="keywords" content="budget,expense,spend,account,bill,income,receipt,simple,financial,家計簿,小遣い帳,かんたん,収支,レシート,支出,簡単,シンプル,便利,無料,マネー記帳,记账,免费,家計簿,가계부">
   <link rel="shortcut icon" href="/img/app-icon.png">
   <link rel="apple-touch-icon" href="/img/app-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/img/app-icon.png">
@@ -62,7 +61,7 @@
     <hr />
 
     <div class="card">
-      <div class="card-header" id="heading1">
+      <div class="card-header">
         <h2 class="mb-0">
           <button class="btn btn-link collapsed" type="button" data-toggle="collapse-next" aria-expanded="true">
             収入はどのように入力すれば良いしょうか？
@@ -80,7 +79,23 @@
     </div>
 
     <div class="card">
-      <div class="card-header" id="heading2">
+      <div class="card-header">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse-next">
+            自分で追加したカテゴリが修正できますか？
+          </button>
+        </h2>
+      </div>
+      <div class="collapse">
+        <div class="card-body">
+          はい、修正できます。<br />
+          修正したいカテゴリを長押しすれば、編集用のメニューが表示されます。
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
         <h2 class="mb-0">
           <button class="btn btn-link collapsed" type="button" data-toggle="collapse-next">
             コピー入力できますか？
@@ -98,14 +113,14 @@
     </div>
 
     <div class="card">
-      <div class="card-header" id="heading3">
+      <div class="card-header">
         <h2 class="mb-0">
           <button class="btn btn-link collapsed" type="button" data-toggle="collapse-next">
             固定項目はどんな機能ですか？
           </button>
         </h2>
       </div>
-      <div class="collapse" aria-labelledby="headingThree">
+      <div class="collapse">
         <div class="card-body">
           給料などの毎月固定で入力が必要なものをあらかじめ設定しておくことで、設定した日に自動的に入力されるようになり、入力の手間を省くことができる機能です。
         </div>
@@ -113,14 +128,14 @@
     </div>
 
     <div class="card">
-      <div class="card-header" id="heading4">
+      <div class="card-header">
         <h2 class="mb-0">
           <button class="btn btn-link collapsed" type="button" data-toggle="collapse-next">
             設定した固定項目はいつ反映されますか？
           </button>
         </h2>
       </div>
-      <div class="collapse" aria-labelledby="headingThree">
+      <div class="collapse">
         <div class="card-body">
           <strong>翌日から設定が有効になります。</strong><br />
           例えば、2月10日（システム日付）に「毎月10日」の固定費A、「毎月15日」の固定費Bを設定した場合、
@@ -130,14 +145,14 @@
     </div>
 
     <div class="card">
-      <div class="card-header" id="heading5">
+      <div class="card-header">
         <h2 class="mb-0">
           <button class="btn btn-link collapsed" type="button" data-toggle="collapse-next">
             新しい携帯に買い換える場合、<br />データ移行はどうすれば良いでしょうか？
           </button>
         </h2>
       </div>
-      <div class="collapse" aria-labelledby="headingThree">
+      <div class="collapse">
         <div class="card-body">
           バックアップと復元の機能を利用すれば、データの移行ができます。<br />
           ※ 現在は、アンドロイド携帯同士しかできません！<br />
@@ -155,7 +170,6 @@
         </div>
       </div>
     </div>
-
   </div>
 
   <!-- JavaScript -->
@@ -169,27 +183,23 @@
       var $target = $(this).parent().parent().next();
       $target.collapse('toggle');
     });
-    $('.card div.collapse')
-      .attr('data-parent', '#faqContainer')
-      .attr('aria-labelledby', function (attr) {
-        $(this).prev().attr('id');
-      });
-    $('.card button').addClass('px-0 text-left')
+    $('.card div.collapse').attr('data-parent', '#faqContainer');
+    $('.card button').addClass('px-0 text-left');
 
-      // Google Analytics
-      (function (i, s, o, g, r, a, m) {
-        i['GoogleAnalyticsObject'] = r;
-        i[r] = i[r] || function () {
-          (i[r].q = i[r].q || []).push(arguments)
-        }, i[r].l = 1 * new Date();
-        a = s.createElement(o), m = s.getElementsByTagName(o)[0];
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m)
-      })(
-        window, document, 'script',
-        'https://www.google-analytics.com/analytics.js', 'ga'
-      );
+    // Google Analytics
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(
+      window, document, 'script',
+      'https://www.google-analytics.com/analytics.js', 'ga'
+    );
 
     ga('create', 'UA-15910127-3', 'auto');
     ga('send', 'pageview');
