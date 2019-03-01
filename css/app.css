@@ -12,3 +12,7 @@ html {
 body {
   padding-top: 49px;
 }
+
+.navbar-brand {
+  font-weight: bold;
+}
