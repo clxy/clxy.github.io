@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Clxy Studio">
   <meta name="author" content="Clxy Studio">
-  <meta name="keywords" content="budget,expense,spend,account,bill,income,receipt,simple,financial,家計簿,小遣い帳,かんたん,収支,レシート,支出,簡単,シンプル,便利,無料,マネー記帳,记账,免费,家計簿,가계부">
+  <meta name="keywords"
+    content="budget,expense,spend,account,bill,income,receipt,simple,financial,家計簿,小遣い帳,かんたん,収支,レシート,支出,簡単,シンプル,便利,無料,マネー記帳,记账,免费,家計簿,가계부">
   <link rel="shortcut icon" href="/img/app-icon.png">
   <link rel="apple-touch-icon" href="/img/app-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/img/app-icon.png">
@@ -69,11 +70,11 @@
         </h2>
       </div>
 
-      <div class="collapse show">
+      <div class="collapse">
         <div class="card-body">
           在輸入畫面上方，選擇收入的類別，該記錄就會作為收入。
           <br />
-          <img src="img/income_cat.png" class="rounded" width="304" />
+          <img src="img/income_cat.png" />
         </div>
       </div>
     </div>
@@ -90,6 +91,7 @@
         <div class="card-body">
           可以修改。<br />
           長按想要修改的類別，點擊下方彈出的菜單裡的修改即可。
+          <img src="img/category_edit.png" />
         </div>
       </div>
     </div>
@@ -107,7 +109,7 @@
           可以拷貝已經輸入的項目。<br />
           長按列表中要拷貝的記錄，或者點擊右側的菜單按鈕，在彈出菜單裡選擇拷貝即可。
           <br />
-          <img src="img/copy.png" class="img-rounded" width="304" />
+          <img src="img/copy.png" />
         </div>
       </div>
     </div>
@@ -122,7 +124,8 @@
       </div>
       <div class="collapse">
         <div class="card-body">
-          例如固定工資等，每月都需要錄入相同內容。利用固定項目，只需要簡單設置，就可以在指定日期自動生成記錄。為您省去很多重複的操作。
+          例如固定工資等，每月都需要錄入相同內容。<br />
+          利用固定項目，只需要簡單設置，就可以在指定日期自動生成記錄。為您省去很多重複的操作。
         </div>
       </div>
     </div>
@@ -164,6 +167,7 @@
         <div class="card-body">
           可以利用「備份及回復」功能來轉移數據。<br />
           ※ 現在只能安卓手機間傳送！<br />
+          ※ 請在版本升級前或您需要的時候備份數據！<br />
           具體操作如下：<br />
           <ol class="p-0 pl-3">
             <li>
@@ -193,6 +197,7 @@
     });
     $('.card div.collapse').attr('data-parent', '#faqContainer');
     $('.card button').addClass('px-0 text-left');
+    $('#faqContainer img').addClass('shadow-sm rounded').attr("width", "300");
 
     // Google Analytics
     (function (i, s, o, g, r, a, m) {
