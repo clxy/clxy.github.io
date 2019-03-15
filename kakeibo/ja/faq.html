@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Clxy Studio">
   <meta name="author" content="Clxy Studio">
-  <meta name="keywords" content="budget,expense,spend,account,bill,income,receipt,simple,financial,家計簿,小遣い帳,かんたん,収支,レシート,支出,簡単,シンプル,便利,無料,マネー記帳,记账,免费,家計簿,가계부">
+  <meta name="keywords"
+    content="budget,expense,spend,account,bill,income,receipt,simple,financial,家計簿,小遣い帳,かんたん,収支,レシート,支出,簡単,シンプル,便利,無料,マネー記帳,记账,免费,家計簿,가계부">
   <link rel="shortcut icon" href="/img/app-icon.png">
   <link rel="apple-touch-icon" href="/img/app-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/img/app-icon.png">
@@ -73,7 +74,7 @@
         <div class="card-body">
           カテゴリ選択画面にて、収入のカテゴリを選択して頂ければ、収入となります。
           <br />
-          <img src="img/income_cat.png" class="rounded" width="304" />
+          <img src="img/income_cat.png" />
         </div>
       </div>
     </div>
@@ -89,7 +90,8 @@
       <div class="collapse">
         <div class="card-body">
           はい、修正できます。<br />
-          修正したいカテゴリを長押しすれば、編集用のメニューが表示されます。
+          修正したいカテゴリを長押しすれば、編集用のメニューが表示されます。<br />
+          <img src="img/category_edit.png" />
         </div>
       </div>
     </div>
@@ -105,9 +107,9 @@
       <div class="collapse">
         <div class="card-body">
           はい、過去に登録した収支をコピーして当日日付で登録できます。<br />
-          カレンダー画面かリスト画面にて、コピーしたい行を右にスワイプすれば、コピーボタンが表示されます。
+          カレンダー画面かリスト画面にて、コピーしたい行を右にスワイプすれば、コピーボタンが表示されます。<br />
           <br />
-          <img src="img/copy.png" class="img-rounded" width="304" />
+          <img src="img/copy.png" />
         </div>
       </div>
     </div>
@@ -122,7 +124,8 @@
       </div>
       <div class="collapse">
         <div class="card-body">
-          給料などの毎月固定で入力が必要なものをあらかじめ設定しておくことで、設定した日に自動的に入力されるようになり、入力の手間を省くことができる機能です。
+          給料などの毎月固定で入力が必要なものをあらかじめ設定しておくことで、<br />
+          設定した日に自動的に入力されるようになり、入力の手間を省くことができる機能です。
         </div>
       </div>
     </div>
@@ -138,8 +141,17 @@
       <div class="collapse">
         <div class="card-body">
           <strong>翌日から設定が有効になります。</strong><br />
-          例えば、2月10日（システム日付）に「毎月10日」の固定費A、「毎月15日」の固定費Bを設定した場合、
-          固定費Aが3月10日になってから初めて自動生成されるようになります。一方、固定費Bは当月(2月)の15日に生成できます。
+          例えば、2月10日（システム日付）に、<br />
+          <ul>
+            <li>「毎月10日」の固定費A</li>
+            <li>「毎月15日」の固定費B</li>
+          </ul>
+          を設定した場合、
+          <ul>
+            <li>固定費Aが3月10日になってから初めて自動生成</li>
+            <li>固定費Bが当月(2月)の15日に自動生成</li>
+          </ul>
+          になります。
         </div>
       </div>
     </div>
@@ -148,7 +160,7 @@
       <div class="card-header">
         <h2 class="mb-0">
           <button class="btn btn-link collapsed" type="button" data-toggle="collapse-next">
-            新しい携帯に買い換える場合、<br />データ移行はどうすれば良いでしょうか？
+            新しい携帯に買い換える時、データ移行はどうすれば良いでしょうか？
           </button>
         </h2>
       </div>
@@ -185,6 +197,7 @@
     });
     $('.card div.collapse').attr('data-parent', '#faqContainer');
     $('.card button').addClass('px-0 text-left');
+    $('#faqContainer img').addClass('shadow-sm rounded').attr("width", "300");
 
     // Google Analytics
     (function (i, s, o, g, r, a, m) {
