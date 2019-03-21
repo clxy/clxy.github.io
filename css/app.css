@@ -16,3 +16,14 @@ body {
 .navbar-brand {
   font-weight: bold;
 }
+
+.navbar-brand img {
+  width: 25px;
+  height: 25px;
+  vertical-align: middle;
+}
+
+.navbar-brand span {
+  height: 25px;
+  vertical-align: middle;
+}
