@@ -2,5 +2,11 @@
   color: #f8f8f8;
   background: url(../img/app-intro-bg.jpg) no-repeat center center;
   background-size: cover;
-  height: 530px;
+  height: 480px;
+}
+
+.intro-divider {
+  width: 400px;
+  border-top: 1px solid #f8f8f8;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
 }
