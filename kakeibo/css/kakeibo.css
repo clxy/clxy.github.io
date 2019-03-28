@@ -1,0 +1,6 @@
+.intro-header {
+  color: #f8f8f8;
+  background: url(../img/app-intro-bg.jpg) no-repeat center center;
+  background-size: cover;
+  height: 530px;
+}
