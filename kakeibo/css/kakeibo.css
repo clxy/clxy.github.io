@@ -9,10 +9,16 @@
 .intro-divider {
   border-top: 1px solid #f8f8f8;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 60%;
+}
+
+.content-section .intro-divider {
+  text-align: left;
+  margin-left: 0;
 }
 
 .content-section {
-  padding: 50px 0;
+  padding: 25px 0;
 }
 
 .content-section:nth-child(even) {
