@@ -2,7 +2,11 @@
 
 ### 概要
 * Clxy Studio主页
+    * /home/
 * 家计簿主页
+    * /kakeibo/
+* 小说
+    * /novel/
 
 
 ### 经纬
