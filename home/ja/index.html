@@ -7,8 +7,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Clxy Studio">
   <meta name="author" content="Clxy Studio">
-  <meta name="keywords"
-    content="budget,expense,spend,account,bill,income,receipt,simple,financial,家計簿,小遣い帳,かんたん,収支,レシート,支出,簡単,シンプル,便利,無料,マネー記帳,收支,免费,记账,가계부">
   <link rel="shortcut icon" href="/lib/img/app-icon.png">
   <link rel="apple-touch-icon" href="/lib/img/app-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/lib/img/app-icon.png">
@@ -23,24 +21,33 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
     <div class="container">
       <a class="navbar-brand" href="/home/ja/">Clxy Studio</a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="mailto:j_clxy@hotmail.com">お問い合わせ</a>
+            <a class="nav-link bi bi-envelope-heart" href="mailto:j_clxy@hotmail.com">
+              お問い合わせ
+            </a>
+          </li>
+          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
+            <div class="vr d-none d-lg-flex h-100 mx-lg-2"></div>
+            <hr class="d-lg-none my-2">
+          </li>
+          <li class="nav-item theme-switcher">
+            <button class="bi bi-moon-stars-fill btn app-dark d-none"></button>
+            <button class="bi bi-brightness-high btn app-light d-none"></button>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              言語
+            <a class="nav-link dropdown-toggle bi bi-translate" href="#" id="langDropdown" role="button"
+              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             </a>
             <div class="dropdown-menu" aria-labelledby="langDropdown" id="langSelect">
               <a class="dropdown-item" href="#" data-lang="en">English</a>
@@ -82,7 +89,8 @@
   <div class="container">
     <footer class="my-md-5 border-top">
       <nav class="nav justify-content-center">
-        <a class="nav-link" href="mailto:j_clxy@hotmail.com">お問い合わせ</a>
+        <a class="nav-link bi bi-envelope-heart" href="mailto:j_clxy@hotmail.com">
+          お問い合わせ</a>
         <a class="nav-link" href="privacy.html">プライバシーポリシー</a>
       </nav>
       <div class="row justify-content-center">
@@ -95,6 +103,7 @@
   <script src="/lib/jquery/jquery-3.7.1.min.js"></script>
   <script src="/lib/bootstrap-5.3/bootstrap.bundle.min.js"></script>
   <script src="/lib/jquery/jquery.easing.min.js"></script>
+  <script src="/lib/js/app.js"></script>
   <script src="/lib/js/lang.js"></script>
   <!-- Google Analytics -->
   <script>
