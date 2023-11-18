@@ -1,5 +1,8 @@
 {
   "html.format.wrapLineLength": 120,
   "html.format.wrapAttributes": "preserve",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "search.exclude": {
+    "**/*.min.*": true
+  }
 }
