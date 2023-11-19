@@ -37,27 +37,8 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item active">
-            <a class="nav-link bi bi-envelope-heart" href="mailto:j_clxy@hotmail.com">
+            <a class="nav-link bi bi-envelope-fill" href="mailto:j_clxy@hotmail.com">
               Contact</a>
-          </li>
-          <li class="nav-item py-2 py-lg-1 col-12 col-lg-auto">
-            <div class="vr d-none d-lg-flex h-100 mx-lg-2"></div>
-            <hr class="d-lg-none my-2">
-          </li>
-          <li class="nav-item theme-switcher">
-            <button class="bi bi-moon-stars-fill btn app-dark d-none"></button>
-            <button class="bi bi-brightness-high btn app-light d-none"></button>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle bi bi-translate" href="#" id="langDropdown" role="button"
-              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            </a>
-            <div class="dropdown-menu" aria-labelledby="langDropdown" id="langSelect">
-              <a class="dropdown-item" href="#" data-lang="en">English</a>
-              <a class="dropdown-item" href="#" data-lang="chs">简体中文</a>
-              <a class="dropdown-item" href="#" data-lang="cht">繁體中文</a>
-              <a class="dropdown-item" href="#" data-lang="ja">日本語</a>
-            </div>
           </li>
         </ul>
       </div>
@@ -196,10 +177,11 @@
 
   <!-- JavaScript -->
   <script src="/lib/jquery/jquery-3.7.1.min.js"></script>
-  <script src="/lib/bootstrap-5.3/bootstrap.bundle.min.js"></script>
   <script src="/lib/jquery/jquery.easing.min.js"></script>
-  <script src="/lib/js/app.js"></script>
-  <script src="/lib/js/lang.js"></script>
+  <script src="/lib/bootstrap-5.3/bootstrap.bundle.min.js"></script>
+  <script src="/lib/handlebars/handlebars.v4.7.8.min.js"></script>
+  <script src="/lib/handlebars/ext.js"></script>
+  <script type="module" src="/lib/js/app.js"></script>
   <script>
     $('body').on('click.collapse-next.data-api', '[data-bs-toggle=collapse-next]', function (e) {
       var $target = $(this).parent().parent().next();

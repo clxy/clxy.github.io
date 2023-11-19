@@ -1,27 +1,12 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Clxy Studio">
-  <meta name="author" content="Clxy Studio">
-  <link rel="shortcut icon" href="/lib/img/app-icon.png">
-  <link rel="apple-touch-icon" href="/lib/img/app-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/lib/img/app-icon.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/lib/img/app-icon.png">
-
-  <title>Clxy Studio</title>
-</head>
-
 <body>
-  <script src="/lib/js/app.js"></script>
-  <script src="/lib/js/lang.js"></script>
-  <script>
-    var lang = detectLang();
-    console.log(`detected:${lang}`)
+  <script src="/lib/handlebars/handlebars.v4.7.8.min.js"></script>
+  <script src="/lib/handlebars/ext.js"></script>
+  <script type="module">
+    import { detectLang, changeLang } from "/lib/js/lang.js"
+    const lang = detectLang();
     changeLang(lang);
   </script>
 </body>
