@@ -8,51 +8,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Clxy Studio">
   <meta name="author" content="Clxy Studio">
-  <meta name="keywords"
-    content="budget,expense,spend,account,bill,income,receipt,simple,financial,家計簿,小遣い帳,かんたん,収支,レシート,支出,簡単,シンプル,便利,無料,マネー記帳,收支,免费,记账,가계부">
-  <link rel="shortcut icon" href="/img/app-icon.png">
-  <link rel="apple-touch-icon" href="/img/app-icon.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/img/app-icon.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/img/app-icon.png">
+  <link rel="shortcut icon" href="/lib/img/app-icon.png">
+  <link rel="apple-touch-icon" href="/lib/img/app-icon.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/lib/img/app-icon.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/lib/img/app-icon.png">
 
   <title>悦記家計簿</title>
 
-  <link href="/css/bootstrap.min.css" rel="stylesheet">
-  <link href="/css/solid.min.css" rel="stylesheet" type="text/css">
-  <link href="/css/fontawesome.min.css" rel="stylesheet" type="text/css">
-  <link href="/css/app.css" rel="stylesheet">
+  <link href="/lib/bootstrap-5.3/bootstrap.min.css" rel="stylesheet">
+  <link href="/lib/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet" type="text/css">
+  <link href="/lib/css/app.css" rel="stylesheet">
 
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+  <nav id="appNavBar" class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
     <div class="container">
       <a class="navbar-brand" href="/kakeibo/ja/">
-        <img src="/img/app-icon.png" />
+        <img src="/lib/img/app-icon.png" />
         <span>悦記家計簿</span>
       </a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ms-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="mailto:clxy-kakeibo@outlook.com">お問い合わせ</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              Language
-            </a>
-            <div class="dropdown-menu" aria-labelledby="langDropdown" id="langSelect">
-              <a class="dropdown-item" href="#" data-lang="en">English</a>
-              <a class="dropdown-item" href="#" data-lang="chs">简体中文</a>
-              <a class="dropdown-item" href="#" data-lang="cht">繁體中文</a>
-              <a class="dropdown-item" href="#" data-lang="ja">日本語</a>
-            </div>
+            <a class="nav-link bi bi-envelope-fill" href="mailto:j_clxy@hotmail.com">
+              お問い合わせ</a>
           </li>
         </ul>
       </div>
@@ -67,7 +53,7 @@
     <div class="card">
       <div class="card-header">
         <h2 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse-next" aria-expanded="true">
+          <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse-next" aria-expanded="true">
             収入はどのように入力すれば良いしょうか？
           </button>
         </h2>
@@ -85,7 +71,7 @@
     <div class="card">
       <div class="card-header">
         <h2 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse-next">
+          <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse-next">
             自分で追加したカテゴリが修正できますか？
           </button>
         </h2>
@@ -102,7 +88,7 @@
     <div class="card">
       <div class="card-header">
         <h2 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse-next">
+          <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse-next">
             コピー入力できますか？
           </button>
         </h2>
@@ -120,7 +106,7 @@
     <div class="card">
       <div class="card-header">
         <h2 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse-next">
+          <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse-next">
             固定項目はどんな機能ですか？
           </button>
         </h2>
@@ -136,7 +122,7 @@
     <div class="card">
       <div class="card-header">
         <h2 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse-next">
+          <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse-next">
             設定した固定項目はいつ反映されますか？
           </button>
         </h2>
@@ -162,7 +148,7 @@
     <div class="card">
       <div class="card-header">
         <h2 class="mb-0">
-          <button class="btn btn-link collapsed" type="button" data-toggle="collapse-next">
+          <button class="btn btn-link collapsed" type="button" data-bs-toggle="collapse-next">
             新しい携帯に買い換える時、データ移行はどうすれば良いでしょうか？
           </button>
         </h2>
@@ -188,13 +174,14 @@
   </div>
 
   <!-- JavaScript -->
-  <script src="/js/jquery-3.3.1.min.js"></script>
-  <script src="/js/popper.min.js"></script>
-  <script src="/js/bootstrap.min.js"></script>
-  <script src="/js/jquery.easing.min.js"></script>
-  <script src="/js/lang.js"></script>
+  <script src="/lib/jquery/jquery-3.7.1.min.js"></script>
+  <script src="/lib/jquery/jquery.easing.min.js"></script>
+  <script src="/lib/bootstrap-5.3/bootstrap.bundle.min.js"></script>
+  <script src="/lib/handlebars/handlebars.v4.7.8.min.js"></script>
+  <script src="/lib/handlebars/ext.js"></script>
+  <script type="module" src="/lib/js/app.js"></script>
   <script>
-    $('body').on('click.collapse-next.data-api', '[data-toggle=collapse-next]', function (e) {
+    $('body').on('click.collapse-next.data-api', '[data-bs-toggle=collapse-next]', function (e) {
       var $target = $(this).parent().parent().next();
       $target.collapse('toggle');
     });

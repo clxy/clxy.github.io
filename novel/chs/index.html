@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Clxy Studio">
   <meta name="author" content="Clxy Studio">
+  content="">
   <link rel="shortcut icon" href="/lib/img/app-icon.png">
   <link rel="apple-touch-icon" href="/lib/img/app-icon.png">
   <link rel="apple-touch-icon" sizes="72x72" href="/lib/img/app-icon.png">
@@ -17,7 +18,7 @@
   <link href="/lib/bootstrap-5.3/bootstrap.min.css" rel="stylesheet">
   <link href="/lib/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet" type="text/css">
   <link href="/lib/css/app.css" rel="stylesheet">
-  <link href="../css/home.css" rel="stylesheet">
+  <!-- <link href="../css/home.css" rel="stylesheet"> -->
 </head>
 
 <body>
@@ -25,23 +26,20 @@
     <div class="container">
       <a class="navbar-brand" href="/home/chs/">Clxy Studio</a>
 
-      <button class="navbar-toggler" type="button"
-        data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item active">
-            <a class="nav-link bi bi-book-fill" href="/novel/chs/">
-              小说
-            </a>
-          </li>
+        <ul class="navbar-nav ms-auto" data-app-lang='chs'>
           <li class="nav-item active">
             <a class="nav-link bi bi-envelope-fill" href="mailto:j_clxy@hotmail.com">
               联系我们
             </a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/novel/chs/">小说章</a>
           </li>
         </ul>
       </div>
@@ -82,6 +80,7 @@
   <script src="/lib/handlebars/handlebars.v4.7.8.min.js"></script>
   <script src="/lib/handlebars/ext.js"></script>
   <script type="module" src="/lib/js/app.js"></script>
+
   <!-- Google Analytics -->
   <script>
     (function (i, s, o, g, r, a, m) {
