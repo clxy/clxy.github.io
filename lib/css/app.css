@@ -28,6 +28,6 @@ body {
   vertical-align: middle;
 }
 
-.hidden {
-  display: none
+.fade-me-in {
+  opacity: 0;
 }
