@@ -5,15 +5,33 @@
   height: 500px;
 }
 
-.intro-header a {
-  color: #f8f8f8 !important
+.swiper {
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.card-deck .card {
-  min-width: 220px;
+.swiper-slide {
+  background-position: center;
+  background-size: auto 100%;
+  width: auto;
+  height: 250px;
 }
 
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
+.swiper-slide img {
+  display: block;
+  height: 100%;
+  width: auto;
+}
+
+@media (min-width: 768px) {
+  .swiper-slide {
+    height: 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .swiper-slide {
+    height: 580px;
+  }
 }

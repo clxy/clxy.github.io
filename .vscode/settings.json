@@ -4,5 +4,9 @@
   "editor.formatOnSave": true,
   "search.exclude": {
     "**/*.min.*": true
-  }
+  },
+  "cSpell.words": [
+    "coverflow",
+    "swiper"
+  ]
 }
