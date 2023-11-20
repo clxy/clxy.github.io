@@ -19,19 +19,6 @@
   height: 530px;
 }
 
-.intro-header a {
-  color: #f8f8f8 !important
-}
-
-.card-deck .card {
-  min-width: 220px;
-}
-
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-}
-
 @media (min-width: 576px) {}
 
 @media (min-width: 768px) {}
