@@ -25,19 +25,9 @@ const introSwiper = new Swiper(".intro-swiper", {
     modifier: 1,
     slideShadows: true,
   },
-
-  // ↓效果很怪！
-  // effect: "fade",
-  // spaceBetween: 30,
-  // navigation: {
-  //   nextEl: ".swiper-button-next",
-  //   prevEl: ".swiper-button-prev",
-  // },
-
 })
 
 var newsSwiper = new Swiper(".news-swiper", {
-
   slidesPerView: 2,
   centeredSlides: true,
   pagination: {
@@ -54,8 +44,35 @@ var newsSwiper = new Swiper(".news-swiper", {
       spaceBetween: 10,
     },
     1200: {
+      initialSlide: 1,
       slidesPerView: 4,
       spaceBetween: 20,
     },
   },
+});
+
+var supportSwiper = new Swiper(".support-swiper", {
+  autoHeight: false,
+  initialSlide: 1,
+  slidesPerView: 5,
+  spaceBetween: 10,
+  centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  // breakpoints: {
+  //   768: {
+  //     initialSlide: 1,
+  //     slidesPerView: 8,
+  //   },
+  //   1200: {
+  //     initialSlide: 3,
+  //     slidesPerView: 10,
+  //   },
+  // },
 });
