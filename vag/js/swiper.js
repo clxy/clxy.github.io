@@ -37,16 +37,25 @@ const introSwiper = new Swiper(".intro-swiper", {
 })
 
 var newsSwiper = new Swiper(".news-swiper", {
+
   slidesPerView: 2,
   centeredSlides: true,
-  spaceBetween: 20,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-    // type: "fraction",
   },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
   },
 });

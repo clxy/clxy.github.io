@@ -24,6 +24,14 @@
   width: auto;
 }
 
+.news-swiper .card {
+  width: 15rem;
+}
+
+.news-swiper .card-text {
+  min-height: 80px;
+}
+
 @media (min-width: 768px) {
   .intro-swiper .swiper-slide {
     height: 400px;
