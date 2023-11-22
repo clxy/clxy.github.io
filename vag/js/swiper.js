@@ -28,6 +28,13 @@ const introSwiper = new Swiper(".intro-swiper", {
 })
 
 var newsSwiper = new Swiper(".news-swiper", {
+  // loop: true,
+  loopAdditionalSlides: 1,
+  speed: 1000,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
   slidesPerView: 2,
   centeredSlides: true,
   pagination: {
@@ -44,7 +51,6 @@ var newsSwiper = new Swiper(".news-swiper", {
       spaceBetween: 10,
     },
     1200: {
-      initialSlide: 1,
       slidesPerView: 4,
       spaceBetween: 20,
     },
@@ -54,6 +60,13 @@ var newsSwiper = new Swiper(".news-swiper", {
 var supportSwiper = new Swiper(".support-swiper", {
   autoHeight: false,
   initialSlide: 1,
+  // loop: true,
+  // loopAdditionalSlides: 1,
+  // speed: 1000,
+  // autoplay: {
+  //   delay: 4000,
+  //   disableOnInteraction: false,
+  // },
   slidesPerView: 5,
   spaceBetween: 10,
   centeredSlides: true,
