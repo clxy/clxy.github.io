@@ -2,7 +2,6 @@
 const introSwiper = new Swiper(".intro-swiper", {
   grabCursor: true,
   centeredSlides: true,
-  slidesPerView: "auto",
   spaceBetween: 20,
   pagination: {
     el: ".swiper-pagination",
@@ -10,6 +9,7 @@ const introSwiper = new Swiper(".intro-swiper", {
     dynamicBullets: true,
     dynamicMainBullets: 2
   },
+
   loop: true,
   loopAdditionalSlides: 1,
   speed: 1000,
@@ -17,6 +17,9 @@ const introSwiper = new Swiper(".intro-swiper", {
     delay: 4000,
     disableOnInteraction: false,
   },
+
+  // slidesPerView: 1, // "auto",
+  slidesPerView: "auto",
   effect: "coverflow",
   coverflowEffect: {
     rotate: 50,
@@ -25,6 +28,28 @@ const introSwiper = new Swiper(".intro-swiper", {
     modifier: 1,
     slideShadows: true,
   },
+})
+
+const introSwiper2 = new Swiper(".intro-swiper2", {
+  grabCursor: true,
+  centeredSlides: true,
+  spaceBetween: 20,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+    dynamicMainBullets: 2
+  },
+
+  loop: true,
+  loopAdditionalSlides: 1,
+  speed: 1000,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+
+  slidesPerView: 1,
 })
 
 var newsSwiper = new Swiper(".news-swiper", {
