@@ -33,3 +33,7 @@ body {
 .fade-me-in {
   opacity: 0;
 }
+
+.navbar.bg-body-tertiary {
+  --bs-bg-opacity: 0.8 !important;
+}
