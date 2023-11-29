@@ -1,6 +1,8 @@
-new Swiper(".intro-swiper", {
+
+const introSwiper = new Swiper(".intro-swiper", {
   grabCursor: true,
   centeredSlides: true,
+  spaceBetween: 20,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -16,36 +18,44 @@ new Swiper(".intro-swiper", {
     disableOnInteraction: false,
   },
 
-  slidesPerView: 1,
+  // slidesPerView: 1, // "auto",
+  slidesPerView: "auto",
+  effect: "coverflow",
+  coverflowEffect: {
+    rotate: 50,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
 })
 
-new Swiper("#va .swiper", {
-  grabCursor: true,
-  centeredSlides: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
+var newsSwiper = new Swiper(".news-swiper", {
   // loop: true,
-  // loopAdditionalSlides: 1,
+  loopAdditionalSlides: 1,
   speed: 1000,
   autoplay: {
     delay: 4000,
     disableOnInteraction: false,
   },
-
-  slidesPerView: 1,
-  spaceBetween: 10,
-
+  slidesPerView: 2,
+  centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-
   breakpoints: {
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
     1200: {
-      slidesPerView: 2,
+      slidesPerView: 4,
+      spaceBetween: 20,
     },
   },
 });

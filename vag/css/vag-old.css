@@ -1,7 +1,3 @@
-.navbar.bg-dark {
-  --bs-bg-opacity: 0 !important;
-}
-
 .container-section>.container[id]::before {
   display: block;
   height: 50px;
@@ -16,10 +12,6 @@
   padding-bottom: 30px;
 }
 
-.intro-swiper {
-  margin-top: -49px;
-}
-
 .intro-swiper .swiper-slide {
   background-position: center;
   background-size: auto 100%;
@@ -32,10 +24,9 @@
 
 .intro-swiper .swiper-slide img {
   display: block;
-  height: auto;
-  width: 100%;
+  height: 100%;
+  width: auto;
 }
-
 
 /* 侧边遮罩 */
 /* .swiper::before,
@@ -59,11 +50,11 @@
 
 /* END 侧边遮罩 */
 
-#va .card {
-  width: 25rem;
+.news-swiper .card {
+  width: 15rem;
 }
 
-#va .card-text {
+.news-swiper .card-text {
   min-height: 80px;
 }
 
