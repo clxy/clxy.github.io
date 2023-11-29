@@ -1,39 +1,6 @@
-
-const introSwiper = new Swiper(".intro-swiper", {
+new Swiper(".intro-swiper", {
   grabCursor: true,
   centeredSlides: true,
-  spaceBetween: 20,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-    dynamicMainBullets: 2
-  },
-
-  loop: true,
-  loopAdditionalSlides: 1,
-  speed: 1000,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-
-  // slidesPerView: 1, // "auto",
-  slidesPerView: "auto",
-  effect: "coverflow",
-  coverflowEffect: {
-    rotate: 50,
-    stretch: 0,
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
-})
-
-const introSwiper2 = new Swiper(".intro-swiper2", {
-  grabCursor: true,
-  centeredSlides: true,
-  spaceBetween: 20,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -52,32 +19,33 @@ const introSwiper2 = new Swiper(".intro-swiper2", {
   slidesPerView: 1,
 })
 
-var newsSwiper = new Swiper(".news-swiper", {
-  // loop: true,
-  loopAdditionalSlides: 1,
-  speed: 1000,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-  slidesPerView: 2,
+new Swiper("#va .swiper", {
+  grabCursor: true,
   centeredSlides: true,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
+
+  // loop: true,
+  // loopAdditionalSlides: 1,
+  speed: 1000,
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+
+  slidesPerView: 1,
+  spaceBetween: 10,
+
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+
   breakpoints: {
-    768: {
-      slidesPerView: 3,
-      spaceBetween: 10,
-    },
     1200: {
-      slidesPerView: 4,
-      spaceBetween: 20,
+      slidesPerView: 2,
     },
   },
 });

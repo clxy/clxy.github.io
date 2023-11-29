@@ -22,7 +22,7 @@
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#appNavBar" data-bs-smooth-scroll="true">
-  <nav id="appNavBar" class="navbar navbar-expand-lg fixed-top bg-body-tertiary">
+  <nav id="appNavBar" class="navbar navbar-expand-lg fixed-top navbar-dark">
     <div class="container">
       <a class="navbar-brand" href="/vag/chs/">北美视觉艺术家协会</a>
 
@@ -33,26 +33,27 @@
       </button>
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto" data-app-lang='en,chs'>
+        <ul class="navbar-nav ms-auto" data-app-lang='en,chs' data-app-theme-no>
           <li class="nav-item">
-            <a class="nav-link bi bi-award-fill" href="#aboutUs">
-              关于我们
-            </a>
+            <a class="nav-link bi bi-award-fill" href="#aboutUs"> 关于我们 </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link bi bi-calendar-heart-fill" href="#news">
-              活动公告
-            </a>
+            <a class="nav-link bi bi-calendar-heart-fill" href="#news"> 资讯 </a>
           </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link bi bi-hearts" href="#supportUs">
-              合作机构
-            </a>
-          </li> -->
           <li class="nav-item">
-            <a class="nav-link bi bi-person-arms-up" href="join-us.html">
-              加入我们
-            </a>
+            <a class="nav-link bi bi-palette-fill" href="#va"> 视觉艺术 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bi bi-brush-fill" href="#"> 艺术设计 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bi bi-person-arms-up" href=""> 合作交流 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bi bi-award-fill" href=""> 奖项 </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link bi bi-people-fill" href="join-us.html"> 会员 </a>
           </li>
         </ul>
       </div>
@@ -61,18 +62,6 @@
 
   <div class="swiper intro-swiper">
     <div class="swiper-wrapper">
-      <!-- <div class="swiper-slide">
-        <img src="../img/intro-swiper0.jpg" />
-      </div> -->
-      <div class="swiper-slide">
-        <img src="../img/intro-swiper1.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="../img/intro-swiper2.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="../img/intro-swiper3.jpg" />
-      </div>
       <div class="swiper-slide">
         <img src="../img/intro-swiper1.jpg" />
       </div>
@@ -86,129 +75,61 @@
     <div class="swiper-pagination"></div>
   </div>
 
-  <div class="swiper intro-swiper2">
-    <div class="swiper-wrapper">
-      <!-- <div class="swiper-slide">
-        <img src="../img/intro-swiper0.jpg" />
-      </div> -->
-      <div class="swiper-slide">
-        <img src="../img/intro-swiper1.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="../img/intro-swiper2.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="../img/intro-swiper3.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="../img/intro-swiper1.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="../img/intro-swiper2.jpg" />
-      </div>
-      <div class="swiper-slide">
-        <img src="../img/intro-swiper3.jpg" />
-      </div>
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
-
-  <div class="container-section bg-body-tertiary">
-    <div class="container gap-3 my-3" tabindex="0" id="aboutUs">
-      <div class="p-3 rounded-2 row fade-me-in" data-app-fade-duration="4">
-        <div class="col-12 h2 text-center">
-          <i class="bi bi-award-fill"></i>
-          关于我们
-        </div>
-        <div class="col-xs-12 col-md-7 p-2 fade-me-in" data-app-fade-duration="4.5">
-          <p class="h6 lh-lg">北美视觉艺术家协会是一家教育机构。</p>
-          <p class="h6 lh-lg">
-            我们的首要任务是教育和培养计划投身于高水平艺术创作的学生。
-            本着因材施教的原则，并辅以一系列理论和技术教学。
-            为学生提供了发展和维持个人艺术事业所需的基本要素，并充分了解当今艺术创作中的问题。
-          </p>
-        </div>
-        <div class="col-xs-12 col-md-5 p-2 fade-me-in" data-app-fade-duration="5">
-          <img src="../img/intro-swiper0.jpg" class="img-fluid">
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container-section">
-    <div class="container vstack gap-3 my-3" tabindex="0" id="news">
+  <div class="container-section text-white" style="background-color: #650ecd" id="va">
+    <div class="container" tabindex="0">
       <div class="p-3 rounded-2 row fade-me-in">
-        <div class="col-12 h2 text-center">
-          <i class="bi bi-calendar-heart-fill"></i>
-          活动公告
+        <div class="col-7 my-2">
+          <h4 class="bi bi-palette-fill"> 视觉艺术</h4>
         </div>
-        <div class="swiper news-swiper">
+        <div class="col-5 my-2 text-end">
+          <a href="#" class="text-white">更多内容···</a>
+        </div>
+        <div class="swiper col-12">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <div class="card">
-                <div class="card-header text-center text-bg-primary"> 2023年11月 </div>
+              <div class="card p-3 mx-auto">
                 <div class="card-body">
-                  <h5 class="card-title">公司成立！</h5>
-                  <p class="card-text">
-                    Hello World！
-                    Hello World！
-                    Hello World！
-                  </p>
-                  <img src=" ../img/vag-icon.png" class="w-25 mx-auto">
+                  <div class="h6 card-subtitle mb-2 text-body-secondary p-1">大师谈艺术</div>
+                  <div class="h5 card-title p-1">从学习视觉艺术过程中我们会获得什么</div>
+                  <div class="card-text p-1">视觉艺术不同于听觉艺术，它是看得见的，用手摸得到的艺术。强调真实性。绘画艺术，服装艺术，摄影艺术都是传统的视觉艺术。</div>
+                  <div class="p-2"><a href="#" class="card-link">了解更多</a></div>
                 </div>
+                <img src="../img/vag-icon.png" class="card-img-bottom">
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card h-100">
-                <div class="card-header text-center text-bg-success"> 2023年12月 </div>
+              <div class="card p-3 mx-auto">
                 <div class="card-body">
-                  <h5 class="card-title">搬入新址！</h5>
-                  <p class="card-text">
-                    Hello World！
-                    Hello World！
-                    Hello World！
-                  </p>
+                  <div class="h6 card-subtitle mb-2 text-body-secondary p-1">大师谈艺术</div>
+                  <div class="h5 card-title p-1">从学习视觉艺术过程中我们会获得什么</div>
+                  <div class="card-text p-1">视觉艺术不同于听觉艺术，它是看得见的，用手摸得到的艺术。强调真实性。绘画艺术，服装艺术，摄影艺术都是传统的视觉艺术。</div>
+                  <div class="p-2"><a href="#" class="card-link">了解更多</a></div>
                 </div>
+                <img src="../img/vag-icon.png" class="card-img-bottom">
               </div>
             </div>
             <div class="swiper-slide">
-              <div class="card">
-                <div class="card-header text-center text-bg-danger"> 2024年01月 </div>
-                <div class=" card-body">
-                  <h5 class="card-title">上市成功！</h5>
-                  <p class="card-text">
-                    Hello World！
-                    Hello World！
-                    Hello World！
-                  </p>
-                  <img src=" ../img/vag-icon.png" class="w-25 mx-auto">
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="card h-100">
-                <div class="card-header text-center text-bg-warning"> 2024年02月 </div>
+              <div class="card p-3 mx-auto">
                 <div class="card-body">
-                  <h5 class="card-title">中国分公司成立！</h5>
-                  <p class="card-text">
-                    Hello World！
-                    Hello World！
-                    Hello World！
-                  </p>
+                  <div class="h6 card-subtitle mb-2 text-body-secondary p-1">大师谈艺术</div>
+                  <div class="h5 card-title p-1">从学习视觉艺术过程中我们会获得什么</div>
+                  <div class="card-text p-1">视觉艺术不同于听觉艺术，它是看得见的，用手摸得到的艺术。强调真实性。绘画艺术，服装艺术，摄影艺术都是传统的视觉艺术。</div>
+                  <div class="p-2"><a href="#" class="card-link">了解更多</a></div>
                 </div>
+                <img src="../img/vag-icon.png" class="card-img-bottom">
               </div>
             </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next text-white"></div>
+          <div class="swiper-button-prev text-white"></div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container-section bg-body-tertiary">
-    <div class="container vstack gap-3 my-3">
+  <div class="container-section text-white" style="background-color: #ff0066">
+    <div class="container vstack gap-3">
       <div class="p-3 rounded-2 row fade-me-in">
         <div class="col-12 h2 text-center">
           <i class="bi bi bi-hearts"></i>
@@ -226,8 +147,8 @@
               <img src="../img/vag-icon.png" class="img-thumbnail">
             </div>
           </div>
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next text-white"></div>
+          <div class="swiper-button-prev text-white"></div>
           <div class="swiper-pagination"></div>
         </div>
       </div>
@@ -235,16 +156,18 @@
   </div>
 
   <footer>
-    <nav class="nav justify-content-center">
-      <a class="nav-link bi bi-envelope-fill" href="mailto:lorne.yan@gmail.com">
-        联系我们
-      </a>
-      <a class="nav-link bi bi-shield-fill-check" href="privacy.html">
-        隐私权政策
-      </a>
-    </nav>
-    <div class="d-flex justify-content-center">
-      <p class="text-body-secondary small">Copyright &copy; Clxy Studio All Rights Reserved</p>
+    <div class="container-section text-white" style="background-color: #801f4f">
+      <div class="container gap-3" tabindex="0">
+        <div class="p-3 rounded-2 row">
+          <div class="col-1 p-2">
+            <img src="../img/intro-swiper0.jpg" class="img-fluid">
+          </div>
+          <div class="col-11 p-2">
+            <p class="h6 lh-lg"><i class="bi bi-geo-alt-fill"></i> 0000 Aaa Bbbb BC Canada</p>
+            <p class="h6 lh-lg"><i class="bi bi-telephone-fill"></i> 000-000-0000</p>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 
