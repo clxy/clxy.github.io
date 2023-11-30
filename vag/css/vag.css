@@ -2,6 +2,12 @@
   --bs-bg-opacity: 0 !important;
 }
 
+.dropdown:hover .dropdown-menu {
+  display: block;
+  /* remove the gap so it doesn't close */
+  margin-top: 0;
+}
+
 .container-section>.container[id]::before {
   display: block;
   height: 50px;
@@ -59,16 +65,13 @@
 
 /* END 侧边遮罩 */
 
-#va .card {
+#va .card,
+#design .card {
   width: 25rem;
 }
 
 #va .card-text {
   min-height: 80px;
-}
-
-.support-swiper img {
-  height: 80px;
 }
 
 @media (min-width: 768px) {

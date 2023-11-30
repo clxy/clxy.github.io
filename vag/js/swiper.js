@@ -19,7 +19,7 @@ new Swiper(".intro-swiper", {
   slidesPerView: 1,
 })
 
-new Swiper("#va .swiper", {
+new Swiper("#va .swiper, #design .swiper", {
   grabCursor: true,
   centeredSlides: true,
   pagination: {
@@ -48,37 +48,4 @@ new Swiper("#va .swiper", {
       slidesPerView: 2,
     },
   },
-});
-
-var supportSwiper = new Swiper(".support-swiper", {
-  autoHeight: false,
-  initialSlide: 1,
-  // loop: true,
-  // loopAdditionalSlides: 1,
-  // speed: 1000,
-  // autoplay: {
-  //   delay: 4000,
-  //   disableOnInteraction: false,
-  // },
-  slidesPerView: 5,
-  spaceBetween: 10,
-  centeredSlides: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  // breakpoints: {
-  //   768: {
-  //     initialSlide: 1,
-  //     slidesPerView: 8,
-  //   },
-  //   1200: {
-  //     initialSlide: 3,
-  //     slidesPerView: 10,
-  //   },
-  // },
 });
