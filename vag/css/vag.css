@@ -16,14 +16,27 @@
   content: "";
 }
 
+.app-bg-purple {
+  background-color: #650ecd;
+}
+
+.app-bg-red {
+  background-color: #ff0066;
+}
+
+.app-bg-red-dark {
+  background-color: #801f4f;
+}
+
+.first-container {
+  margin-top: -49px;
+  min-height: 5rem;
+}
+
 .swiper {
   width: 100%;
   padding-top: 10px;
   padding-bottom: 30px;
-}
-
-.intro-swiper {
-  margin-top: -49px;
 }
 
 .intro-swiper .swiper-slide {
@@ -41,29 +54,6 @@
   height: auto;
   width: 100%;
 }
-
-
-/* 侧边遮罩 */
-/* .swiper::before,
-.swiper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 50px;
-  background-color: rgba(255, 255, 255, 0.5);
-  z-index: 9;
-}
-
-.swiper::before {
-  left: 0;
-}
-
-.swiper::after {
-  right: 0;
-} */
-
-/* END 侧边遮罩 */
 
 #va .card,
 #design .card {
