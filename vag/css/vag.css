@@ -1,5 +1,5 @@
 .navbar.bg-dark {
-  --bs-bg-opacity: 0 !important;
+  --bs-bg-opacity: 0.5 !important;
 }
 
 .dropdown:hover .dropdown-menu {
