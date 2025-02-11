@@ -2,9 +2,7 @@
 </script>
 
 <template>
-  <UApp>
-    <RouterView />
-  </UApp>
+  <div>Creation</div>
 </template>
 
 <style scoped></style>

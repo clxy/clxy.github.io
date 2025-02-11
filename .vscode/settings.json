@@ -1,9 +1,19 @@
 {
+  "editor.renderWhitespace": "all",
   "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.tabSize": 2,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "vue.format.wrapAttributes": "preserve",
+  "html.format.wrapAttributes": "preserve",
+  "javascript.format.semicolons": "remove",
+  "typescript.format.semicolons": "remove",
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "editor.quickSuggestions": {
-    "strings": "on"
-  }
+  "cSpell.words": [
+    "Nuxt"
+  ],
 }
