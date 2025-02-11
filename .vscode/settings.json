@@ -1,12 +1,9 @@
 {
-  "html.format.wrapLineLength": 120,
-  "html.format.wrapAttributes": "preserve",
   "editor.formatOnSave": true,
-  "search.exclude": {
-    "**/*.min.*": true
+  "files.associations": {
+    "*.css": "tailwindcss"
   },
-  "cSpell.words": [
-    "coverflow",
-    "swiper"
-  ]
+  "editor.quickSuggestions": {
+    "strings": "on"
+  }
 }
