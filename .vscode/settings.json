@@ -6,6 +6,8 @@
   "editor.quickSuggestions": {
     "strings": "on"
   },
+  "liveServer.settings.file": "index.html",
+  "liveServer.settings.root": "/dist",
   "vue.format.wrapAttributes": "preserve",
   "html.format.wrapAttributes": "preserve",
   "javascript.format.semicolons": "remove",

@@ -13,6 +13,8 @@ const app = createApp(App)
 const router = createRouter({
   routes: routes,
   history: createWebHistory()
+  // 如果History模式不生效，可以尝试使用Hash模式
+  // history: createWebHashHistory()
 })
 
 app.use(router)
