@@ -23,7 +23,8 @@ console.log("Home")
 <style scoped></style>
 
 <route lang="yaml">
-name: name-override
+name: Home
 meta:
-  requiresAuth: true
+  title: Home
+  icon: i-mdi-house-outline
 </route>

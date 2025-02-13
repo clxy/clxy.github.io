@@ -6,3 +6,10 @@
 </template>
 
 <style scoped></style>
+
+<route lang="yaml">
+name: App
+meta:
+  title: App
+  icon: i-mdi-app-badge-outline
+</route>

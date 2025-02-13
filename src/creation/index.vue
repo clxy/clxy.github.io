@@ -6,3 +6,10 @@
 </template>
 
 <style scoped></style>
+
+<route lang="yaml">
+name: Creation
+meta:
+  title: Creation
+  icon: i-mdi-lightbulb-on-outline
+</route>
