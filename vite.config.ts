@@ -17,6 +17,11 @@ export default defineConfig({
     // for vite-plugin-pages
     Pages({
       dirs: 'src',
+      // 需要多个目录不同配置例子
+      // dirs: [
+      //   { dir: 'src', baseRoute: '/', filePattern: '**\/index.vue' },
+      //   { dir: 'src', baseRoute: '/', filePattern: '**\/*Page.vue' },
+      // ],
       exclude: [
         '**/components/*',
         '**/assets/*',

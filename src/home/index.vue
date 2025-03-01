@@ -11,7 +11,7 @@ console.log("Home")
     <div class="flex items-center gap-2">
       <UButton
         label="Documentation" icon="i-lucide-square-play"
-        to="https://ui3.nuxt.dev/getting-started/installation/vue" target="_blank" />
+        to="https://ui3.nuxt.dev/getting-started/installation/vue" target="_blank" external />
 
       <UButton
         label="GitHub" color="neutral" variant="outline" icon="i-simple-icons:github"
