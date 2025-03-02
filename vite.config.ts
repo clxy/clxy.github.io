@@ -6,6 +6,13 @@ import Pages from 'vite-plugin-pages'
 
 // https://vite.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      // 动态组件用到 template: '<component :is="component" />'，需要下面的
+      // 要么老老实实分开文件写，要么用下面的完整版
+      vue: 'vue/dist/vue.esm-bundler.js' // 使用完整版
+    }
+  },
   plugins: [
     vue(),
 
@@ -14,7 +21,9 @@ export default defineConfig({
       prefix: 'U', // Default: 'U'。区分大小写
     }),
 
-    // for vite-plugin-pages
+    /**
+     * 自动注册路由
+     */
     Pages({
       dirs: 'src',
       // 需要多个目录不同配置例子
