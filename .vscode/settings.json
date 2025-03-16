@@ -16,6 +16,7 @@
     "*.css": "tailwindcss"
   },
   "cSpell.words": [
+    "autoresize",
     "Nuxt"
   ],
 }
