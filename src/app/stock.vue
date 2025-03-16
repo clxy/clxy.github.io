@@ -15,7 +15,7 @@ use([CanvasRenderer, LineChart, GridComponent, TooltipComponent, TitleComponent]
 const chartOption = ref<Record<string, any>>({})
 
 // https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol=600104.SHH&outputsize=full&apikey=demo
-const apiKey = 'VPF22NPU6G2MHF2X' // 'demo' for demo purposes
+const apiKey = 'demo' //for demo purposes
 const symbol = 'AAPL'
 
 const fetchStockData = async () => {
