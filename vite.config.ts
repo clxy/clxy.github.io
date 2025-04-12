@@ -1,3 +1,4 @@
+import path from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import ui from '@nuxt/ui/vite'
@@ -8,9 +9,10 @@ import Pages from 'vite-plugin-pages'
 export default defineConfig({
   resolve: {
     alias: {
+      '@': path.resolve(__dirname, './src'), // 方便引入
       // 动态组件用到 template: '<component :is="component" />'，需要下面的
       // 要么老老实实分开文件写，要么用下面的完整版
-      vue: 'vue/dist/vue.esm-bundler.js' // 使用完整版
+      vue: 'vue/dist/vue.esm-bundler.js', // 使用完整版
     }
   },
   plugins: [
@@ -34,7 +36,7 @@ export default defineConfig({
       exclude: [
         '**/components/*',
         '**/assets/*',
-        'App.vue', 'main.ts', 'vite-env.d.ts',
+        'App.vue', 'router.ts', 'main.ts', 'vite-env.d.ts',
       ],
     }),
   ],

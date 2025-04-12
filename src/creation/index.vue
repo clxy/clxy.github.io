@@ -12,4 +12,5 @@ name: Creation
 meta:
   title: Creation
   icon: i-mdi-lightbulb-on-outline
+  order: 2
 </route>

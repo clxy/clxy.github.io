@@ -3,23 +3,13 @@ import './assets/main.css'
 import { createApp } from 'vue'
 import App from './App.vue'
 
+
 const app = createApp(App)
 
 /**
- * 引入路由配置
+ * 引入router
  */
-import { createRouter, createWebHistory } from 'vue-router'
-import routes from '~pages'
-console.log(routes)
-const router = createRouter({
-  routes: [
-    { path: '/', redirect: '/home' },
-    ...routes
-  ],
-  history: createWebHistory()
-  // 如果History模式不生效，可以尝试使用Hash模式
-  // history: createWebHashHistory()
-})
+import router from './router'
 app.use(router)
 
 /**

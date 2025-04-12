@@ -12,4 +12,5 @@ name: App
 meta:
   title: App
   icon: i-mdi-app-badge-outline
+  order: 3
 </route>

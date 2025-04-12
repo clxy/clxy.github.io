@@ -27,4 +27,5 @@ name: Home
 meta:
   title: Home
   icon: i-mdi-house-outline
+  order: 1
 </route>
