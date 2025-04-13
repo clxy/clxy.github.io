@@ -88,7 +88,6 @@ onMounted(() => {
 <route lang="yaml">
 name: Stock
 meta:
-  parent: app
   title: Stock
   icon: i-mdi-chart-finance
 </route>

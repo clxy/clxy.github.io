@@ -19,4 +19,5 @@
     "autoresize",
     "Nuxt"
   ],
+  "editor.formatOnSaveMode": "modifications",
 }

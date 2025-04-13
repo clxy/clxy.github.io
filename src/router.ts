@@ -3,12 +3,14 @@ import { createRouter, createWebHistory, } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
 import autoRoutes from '~pages'
 
-// console.log(`before sort`, autoRoutes)
-
-const buildRoutes = (routes: any[]) => {
+/**
+ * 为了菜单准备的，带有父子嵌套关系的路由树
+ */
+const buildRouteTree = (routes: any[]) => {
   /**
-   * 为了先处理嵌套路由，
+   * 为了处理嵌套路由，
    * 按照路径长度降序排列路由
+   * 在各个路由中的meta里面添加了order属性，但没有使用
    */
   routes.sort((a, b) => {
     const aPath = a.path.split('/').filter((p: string) => p).length
@@ -27,17 +29,16 @@ const buildRoutes = (routes: any[]) => {
   }))
 
   routes.forEach((route) => {
-    const pathArray = route.path.split('/').filter((p: string) => p)
+    const path = route.path
+    const pathArray = path.split('/').filter((p: string) => p)
     if (pathArray.length <= 1) return // 根路由不需要处理
 
     // 查找父路由
     const parentPath = '/' + pathArray.slice(0, -1).join('/')
     const parent = routeMap.get(parentPath)
     if (parent) {
-      // 添加到父路由的 children 中
-      parent.children.push(routeMap.get(route.path))
-      // 从根级别移除
-      routeMap.delete(route.path)
+      parent.children.push(routeMap.get(path))
+      routeMap.delete(path)
     }
   })
 
@@ -45,12 +46,15 @@ const buildRoutes = (routes: any[]) => {
   return result
 }
 
-const routes: RouteRecordRaw[] = buildRoutes(autoRoutes)
+// 菜单用嵌套路由树
+const routeTree: RouteRecordRaw[] = buildRouteTree(autoRoutes)
+// console.log(`routes`, routes)
 
 const router = createRouter({
   routes: [
     { path: '/', redirect: '/home' },
-    ...routes,
+    // 路由本身不嵌套
+    ...autoRoutes,
   ],
   history: createWebHistory()
   // 如果History模式不生效，可以尝试使用Hash模式
@@ -58,4 +62,4 @@ const router = createRouter({
 })
 
 export default router
-export { routes } // 导出路由列表
+export { routeTree } // 导出路由列表

@@ -4,7 +4,7 @@ import { useRouter, } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
 import type { NavigationMenuItem } from '@nuxt/ui'
 
-import { routes, } from '@/router'
+import { routeTree, } from '@/router'
 import { useTheme } from './useTheme'
 import Logo from './logo.vue'
 
@@ -24,8 +24,7 @@ const route2MenuItem = (route: RouteRecordRaw, level = 1): NavigationMenuItem =>
   // 父节点有path时，打开关闭同时，也跳转（← 默认只打开关闭）
   menuItem.onSelect = (e: Event) => {
     // console.log(`menuItem.onSelect`, menuItem)
-    // e.preventDefault()
-    // if (menuItem.children) { menuItem.defaultOpen = !menuItem.defaultOpen }
+    e.preventDefault()
     if (menuItem.to) { router.push(menuItem.to) }
   }
 
@@ -40,11 +39,11 @@ const route2MenuItem = (route: RouteRecordRaw, level = 1): NavigationMenuItem =>
 // 水平菜单
 const hMenuItems = computed(() => [
   // [{ slot: 'header' }], // 头部插槽
-  routes.map((route) => route2MenuItem(route)),
+  routeTree.map((route) => route2MenuItem(route)),
   // [{ slot: 'tail' },] // 尾部插槽
 ])
 // 垂直菜单
-const vMenuItems = computed(() => routes.map((route) => route2MenuItem(route, 999)))
+const vMenuItems = computed(() => routeTree.map((route) => route2MenuItem(route, 999)))
 
 // Theme
 const { themeItems, } = useTheme()
@@ -55,7 +54,7 @@ const slideoverState = ref(false)
 
 <template>
   <header
-    class="sticky top-0 z-50 border-b border-(--ui-border) bg-(--ui-background) justify-between flex">
+    class="sticky top-0 z-50 border-b border-(--ui-border) bg-(--ui-bg)/75 backdrop-blur justify-between flex">
 
     <div class="flex justify-between h-(--ui-header-height) my-3">
       <Logo />

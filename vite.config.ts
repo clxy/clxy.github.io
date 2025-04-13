@@ -36,7 +36,7 @@ export default defineConfig({
       exclude: [
         '**/components/*',
         '**/assets/*',
-        'App.vue', 'router.ts', 'main.ts', 'vite-env.d.ts',
+        'App.vue', 'const.ts', 'router.ts', 'main.ts', 'vite-env.d.ts',
       ],
     }),
   ],
