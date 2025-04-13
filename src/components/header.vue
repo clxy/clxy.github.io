@@ -1,74 +1,55 @@
 <script setup lang="ts">
 import { ref, computed, } from 'vue'
+import { useRouter, } from 'vue-router'
 import type { RouteRecordRaw } from 'vue-router'
-
 import type { NavigationMenuItem } from '@nuxt/ui'
 
 import { routes, } from '@/router'
+import { useTheme } from './useTheme'
 import Logo from './logo.vue'
+
+const router = useRouter()
 
 // 从routes meta里提取Menu Item信息
 const route2MenuItem = (route: RouteRecordRaw, level = 1): NavigationMenuItem => {
+  const isActive = router.currentRoute.value.path.startsWith(route.path)
   const menuItem = {
     label: route?.meta?.title as string | undefined,
     icon: route?.meta?.icon as string | undefined,
     to: route.path,
     defaultOpen: true,
+    active: isActive
   } as NavigationMenuItem
 
+  // 父节点有path时，打开关闭同时，也跳转（← 默认只打开关闭）
+  menuItem.onSelect = (e: Event) => {
+    // console.log(`menuItem.onSelect`, menuItem)
+    // e.preventDefault()
+    // if (menuItem.children) { menuItem.defaultOpen = !menuItem.defaultOpen }
+    if (menuItem.to) { router.push(menuItem.to) }
+  }
+
   if (route.children && level > 1) {
-    console.log('route.children', route.children, level)
+    // console.log('route.children', route.children, level)
     menuItem.children = route.children.map(route2MenuItem, level - 1)
   }
 
   return menuItem
 }
 
-const hItems = ref([
-  // [{ slot: 'header' }],
+// 水平菜单
+const hMenuItems = computed(() => [
+  // [{ slot: 'header' }], // 头部插槽
   routes.map((route) => route2MenuItem(route)),
-  // [{ slot: 'tail' },]
+  // [{ slot: 'tail' },] // 尾部插槽
 ])
+// 垂直菜单
+const vMenuItems = computed(() => routes.map((route) => route2MenuItem(route, 999)))
 
-const vItems = ref([routes.map((route) => route2MenuItem(route, 999))])
+// Theme
+const { themeItems, } = useTheme()
 
-const showBookmarks = ref(true)
-const showHistory = ref(false)
-const showDownloads = ref(false)
-
-const modeItems = computed(() => [
-  {
-    label: 'Light',
-    icon: 'i-lucide-bookmark',
-    type: 'checkbox' as const,
-    checked: showBookmarks.value,
-    onUpdateChecked(checked: boolean) {
-      showBookmarks.value = checked
-    },
-    onSelect(e: Event) {
-      e.preventDefault()
-    }
-  },
-  {
-    label: 'Dark',
-    icon: 'i-lucide-clock',
-    type: 'checkbox' as const,
-    checked: showHistory.value,
-    onUpdateChecked(checked: boolean) {
-      showHistory.value = checked
-    }
-  },
-  {
-    label: 'System',
-    icon: 'i-lucide-download',
-    type: 'checkbox' as const,
-    checked: showDownloads.value,
-    onUpdateChecked(checked: boolean) {
-      showDownloads.value = checked
-    }
-  }
-])
-
+// 侧边栏菜单开闭状态
 const slideoverState = ref(false)
 </script>
 
@@ -82,12 +63,12 @@ const slideoverState = ref(false)
 
     <UNavigationMenu
       orientation="horizontal"
-      :items="hItems"
-      class="hidden lg:flex justify-between h-(--ui-header-height)">
+      :items="hMenuItems"
+      class="hidden md:flex justify-between h-(--ui-header-height)">
     </UNavigationMenu>
 
     <div class="flex items-center justify-between h-(--ui-header-height)">
-      <UDropdownMenu :items="modeItems" :content="{ align: 'start' }" :ui="{ content: 'w-48' }">
+      <UDropdownMenu :items="themeItems" :content="{ align: 'start' }" :ui="{ content: 'w-48' }">
         <UButton label="" color="neutral" variant="outline" icon="i-mdi-sun-moon-stars" />
       </UDropdownMenu>
 
@@ -95,7 +76,7 @@ const slideoverState = ref(false)
         label="" color="neutral" variant="outline" icon="i-mdi-github"
         to="https://github.com/clxy/clxy.github.io" target="_blank" />
 
-      <USlideover side="right" v-model:open="slideoverState" class="lg:hidden">
+      <USlideover side="right" v-model:open="slideoverState" class="md:hidden">
         <UButton label="" color="neutral" variant="outline" icon="i-mdi-menu" />
         <template #header>
           <div class="flex items-center justify-between w-full h-(--ui-header-height)">
@@ -106,8 +87,9 @@ const slideoverState = ref(false)
         <template #body>
           <div class="h-full">
             <UNavigationMenu
+              highlight
               orientation="vertical"
-              :items="vItems"
+              :items="vMenuItems"
               class="flex justify-between">
             </UNavigationMenu>
           </div>
