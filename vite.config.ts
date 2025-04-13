@@ -12,7 +12,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'), // 方便引入
       // 动态组件用到 template: '<component :is="component" />'，需要下面的
       // 要么老老实实分开文件写，要么用下面的完整版
-      vue: 'vue/dist/vue.esm-bundler.js', // 使用完整版
+      // vue: 'vue/dist/vue.esm-bundler.js', // 使用完整版
     }
   },
   plugins: [

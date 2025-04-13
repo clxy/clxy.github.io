@@ -1,15 +1,5 @@
-<template>
-  <ULink to="/home" v-if="!noLink">
-    <LogoImage />
-  </ULink>
-  <LogoImage v-else />
-</template>
-
 <script setup lang="ts">
-
-const LogoImage = {
-  template: `<img src="/assets/logo.png" alt="Clxy Studio" class="h-6 w-auto" />`
-}
+import LogoImage from './logo-image.vue'
 
 defineProps({
   // 控制是否禁用链接
@@ -19,5 +9,12 @@ defineProps({
   },
 })
 </script>
+
+<template>
+  <ULink to="/home" v-if="!noLink">
+    <LogoImage />
+  </ULink>
+  <LogoImage v-else />
+</template>
 
 <style scoped></style>
