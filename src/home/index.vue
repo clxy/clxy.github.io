@@ -41,9 +41,12 @@ onMounted(() => {
         </UButton>
       </template>
       <div class="flex items-center justify-center gap-4">
-        <UButton icon="i-mdi-quill" size="xl" color="secondary" variant="outline" />
-        <UButton icon="i-mdi-art" size="xl" color="warning" variant="outline" />
-        <UButton icon="i-mdi-music-note-eighth" size="xl" color="error" variant="outline" />
+        <UButton icon="i-mdi-quill" size="xl" color="secondary" variant="outline"
+          to="/creation?type=article" />
+        <UButton icon="i-mdi-art" size="xl" color="warning" variant="outline"
+          to="/creation?type=painting" />
+        <UButton icon="i-mdi-music-note-eighth" size="xl" color="error" variant="outline"
+          to="/creation?type=music" />
       </div>
     </UCard>
 
@@ -56,6 +59,25 @@ onMounted(() => {
       <div class="flex items-center justify-center gap-4">
         <UButton icon="i-mdi-chart-finance" size="xl" color="secondary" variant="outline"
           to="/app/stock" />
+      </div>
+    </UCard>
+
+    <UCard variant="subtle">
+      <template #header>
+        <UButton icon="i-mdi-app-badge-outline" to="/app" variant="link">
+          US
+        </UButton>
+      </template>
+      <div class="flex items-center justify-center gap-4">
+        <ULink to="/creation?author=yh">
+          <UAvatar src="/assets/yh.png" size="3xl" />
+        </ULink>
+        <ULink to="/creation?author=mm">
+          <UAvatar src="/assets/mm.gif" size="3xl" />
+        </ULink>
+        <ULink to="/creation?author=gg">
+          <UAvatar src="/assets/gg.png" size="3xl" />
+        </ULink>
       </div>
     </UCard>
   </div>
