@@ -68,11 +68,11 @@ const slideoverState = ref(false)
 
     <div class="flex items-center justify-between h-(--ui-header-height)">
       <UDropdownMenu :items="themeItems" :content="{ align: 'start' }" :ui="{ content: 'w-48' }">
-        <UButton label="" color="neutral" variant="outline" icon="i-mdi-sun-moon-stars" />
+        <UButton label="" color="neutral" variant="ghost" icon="i-mdi-sun-moon-stars" />
       </UDropdownMenu>
 
       <UButton
-        label="" color="neutral" variant="outline" icon="i-mdi-github"
+        label="" color="neutral" variant="ghost" icon="i-mdi-github"
         to="https://github.com/clxy/clxy.github.io" target="_blank" />
 
       <USlideover side="right" v-model:open="slideoverState" class="md:hidden">
