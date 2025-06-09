@@ -1,5 +1,14 @@
 <script setup lang="ts">
-import MarkdownViewer from '@/components/markdown-viewer.vue'
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
+
+const items = ref(['article', 'painting', 'music'])
+const route = useRoute()
+const value = ref('article')
+const type = route.query.type
+if (type && items.value.includes(type as string)) {
+  value.value = type as string
+}
 </script>
 
 <template>
@@ -8,14 +17,17 @@ import MarkdownViewer from '@/components/markdown-viewer.vue'
 
     <UCard variant="subtle">
       <template #header>
-        <div class="text-right">TODO: Author and timestamp</div>
+        <div class="text-left flex items-center gap-2">
+          <UIcon name="i-mdi-magnify" />
+        </div>
       </template>
       <div class="flex items-center justify-center gap-4">
-        <MarkdownViewer filePath="gg-a-1.md" />
+        <UFormField label="Type">
+          <USelect v-model="value" :items="items" class="w-48" />
+        </UFormField>
       </div>
-      <template #footer>
-        <div class="text-right">TODO: Author and timestamp</div>
-      </template>
+      <!-- <template #footer>
+      </template> -->
     </UCard>
   </UContainer>
 </template>
