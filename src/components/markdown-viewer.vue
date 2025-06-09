@@ -2,17 +2,14 @@
   <div v-html="htmlContent" class="prose dark:prose-invert max-w-none"></div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import MarkdownIt from 'markdown-it'
 import collapsible from 'markdown-it-collapsible'
 
-const props = defineProps({
-  filePath: {
-    type: String,
-    required: true,
-  },
-})
+const props = defineProps < {
+  filePath: string
+} > ()
 
 const htmlContent = ref('')
 const md = new MarkdownIt()
@@ -27,8 +24,8 @@ onMounted(async () => {
     } else {
       htmlContent.value = `<p>Error loading file: ${props.filePath}</p>`
     }
-  } catch (error) {
-    htmlContent.value = `<p>Error: ${error.message}</p>`
+  } catch (error: unknown) {
+    htmlContent.value = `<p>Error: ${error}</p>`
   }
 })
 </script>
