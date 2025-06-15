@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
+import { CreationType } from '@/creation/const'
 
 // 定义背景图片列表
 const backgroundImages = [
@@ -41,12 +42,15 @@ onMounted(() => {
         </UButton>
       </template>
       <div class="flex items-center justify-center gap-4">
-        <UButton icon="i-mdi-quill" size="xl" color="secondary" variant="outline"
-          to="/creation?type=article" />
-        <UButton icon="i-mdi-art" size="xl" color="warning" variant="outline"
-          to="/creation?type=painting" />
-        <UButton icon="i-mdi-music-note-eighth" size="xl" color="error" variant="outline"
-          to="/creation?type=music" />
+        <UButton
+          v-for="(type, index) in CreationType"
+          :key="index"
+          :icon="type.icon"
+          :color="type.color"
+          :to="`/creation?type=${index}`"
+          variant="outline"
+          size="xl" />
+
       </div>
     </UCard>
 

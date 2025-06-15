@@ -1,5 +1,10 @@
 <script setup lang="ts">
 import MarkdownViewer from '@/components/markdown-viewer.vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const urlId = route.query.id?.toString()
+console.log('route query id:', urlId)
 </script>
 
 <template>
@@ -23,7 +28,7 @@ import MarkdownViewer from '@/components/markdown-viewer.vue'
 <style scoped></style>
 
 <route lang="yaml">
-name: Creation Detail
+name: CreationDetail
 meta:
   title: Creation
   icon: i-mdi-lightbulb-on-outline
