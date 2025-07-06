@@ -1,10 +1,15 @@
 /**
  * Creation types and works
  */
-export const CreationType = {
-  article: { name: '文章', color: 'secondary', icon: 'i-mdi-quill', },
-  music: { name: '音乐', color: 'error', icon: 'i-mdi-music-note-eighth', },
-  painting: { name: '绘画', color: 'warning', icon: 'i-mdi-art', },
+interface CreationTypeItem {
+  name: string
+  color: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error' | 'neutral'
+  icon: string
+}
+export const CreationType: Record<string, CreationTypeItem> = {
+  'article': { name: '文章', color: 'secondary', icon: 'i-mdi-quill', },
+  'music': { name: '音乐', color: 'error', icon: 'i-mdi-music-note-eighth', },
+  'painting': { name: '绘画', color: 'warning', icon: 'i-mdi-art', },
 } as const
 
 /**

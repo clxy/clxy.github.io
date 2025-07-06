@@ -34,7 +34,7 @@ const data = computed(() =>
     .filter(work => (findType.value === 'all' || work.type === findType.value)
       && (work.title.includes(findKeyword.value) || work.description.includes(findKeyword.value)))
     .map((work) => {
-      const cType = CreationType[work.type as keyof typeof CreationType]
+      const cType = CreationType[work.type]
       return {
         ...work,
         icon: cType?.icon || '',
