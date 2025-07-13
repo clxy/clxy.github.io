@@ -1,12 +1,18 @@
 <script setup lang="ts">
 import MarkdownViewer from '@/components/markdown-viewer.vue'
-import { useRoute } from 'vue-router'
-import { CreationType, Works, type Work } from './const'
+import { useRoute, useRouter, } from 'vue-router'
+import { CreationType, Works, } from './const'
+import Comment from '@/components/comment.vue'
 
 const route = useRoute()
 const urlId = route.query.id?.toString()
 console.log('route query id:', urlId)
 const work = Works.find(work => work.cid === urlId)
+if (!work && urlId !== '404') {
+  const router = useRouter()
+  router.replace({ query: { ...route.query, id: '404' } })
+}
+
 </script>
 
 <template>
@@ -48,19 +54,23 @@ const work = Works.find(work => work.cid === urlId)
           </template>
         </div>
         <template #footer>
-          <div class="text-right">TODO: Author and timestamp</div>
+
         </template>
       </UCard>
     </template>
+    <div class="mt-8">
+      <Comment />
+    </div>
   </UContainer>
 </template>
+  # icon: i-mdi-aspect-ratio
 
 <style scoped></style>
 
 <route lang="yaml">
 name: CreationDetail
 meta:
-  title: Creation
-  icon: i-mdi-lightbulb-on-outline
+  title: Detail
+  icon: i-mdi-auto-fix
   order: 2
 </route>

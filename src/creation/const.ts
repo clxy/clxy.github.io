@@ -30,12 +30,14 @@ export interface Work {
  */
 export const Works: Work[] = [
   {
-    type: 'music', author: 'yh', cid: 'yh-m-1', ext: 'wav',
+    cid: 'yh-m-1', author: 'yh',
+    type: 'music', ext: 'wav',
     title: '美妙的旋律',
     description: '一首动听的音乐作品，展现了作者的音乐才华。',
   },
   {
-    type: 'article', author: 'gg', cid: 'gg-a-1', ext: 'md',
+    cid: 'gg-a-1', author: 'gg',
+    type: 'article', ext: 'md',
     title: '从进化心理学到AI',
     description: '一篇对进化心理学和AI话题的娱乐化演绎。',
   },
