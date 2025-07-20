@@ -1,14 +1,33 @@
-## Clxy Studio Homepage
+# 主页
 
-### 概要
-* Clxy Studio主页
-    * /home/
-* 家计簿主页
-    * /kakeibo/
-* 小说
-    * /novel/
+## 概要
+- 放些小说之类的作品啥的
+- 放些静态的App啥的
 
 
-### 经纬
-* 最初checkout自良哥的[swalloworks](https://github.com/swalloworks/swalloworks.github.io)
-* 单飞后，放弃[Jekyll](https://jekyllrb.com/)，改成手工
+## 技术
+- FW：Vue
+- Router:
+  - vue-router
+  - 用vite-plugin-pages自动配置
+- UI：Nuxt UI
+- Icon：Material Design Icons
+  - https://icon-sets.iconify.design/?query=lightbulb&search-prefix=mdi
+
+## 规范
+- 文件名一律kebab-case
+  - 例子，my-component.vue
+
+# 主页
+
+## 概要
+- 放些小说之类的作品啥的
+- 放些静态的App啥的
+
+## 技术
+- FW：Vue
+- Router:
+  - vue-router
+  - 用vite-plugin-pages自动配置
+- UI：Nuxt UI
+- Icon：Material

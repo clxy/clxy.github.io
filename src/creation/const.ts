@@ -1,0 +1,44 @@
+/**
+ * Creation types and works
+ */
+interface CreationTypeItem {
+  name: string
+  color: 'primary' | 'secondary' | 'success' | 'info' | 'warning' | 'error' | 'neutral'
+  icon: string
+}
+export const CreationType: Record<string, CreationTypeItem> = {
+  'article': { name: '文章', color: 'secondary', icon: 'i-mdi-quill', },
+  'music': { name: '音乐', color: 'error', icon: 'i-mdi-music-note-eighth', },
+  'painting': { name: '绘画', color: 'warning', icon: 'i-mdi-art', },
+} as const
+
+/**
+ * 作品
+ */
+export interface Work {
+  type: string
+  author: string
+  cid: string
+  ext: string
+  title: string
+  desc: string
+}
+/**
+ * File path assets/creation/
+ * - yh-m-1.wav
+ * - gg-a-1.md
+ */
+export const Works: Work[] = [
+  {
+    cid: 'yh-m-1', author: 'yh',
+    type: 'music', ext: 'm4a',
+    title: '沉思',
+    desc: '2025年寒假录给奶奶的音乐作品',
+  },
+  {
+    cid: 'gg-a-1', author: 'gg',
+    type: 'article', ext: 'md',
+    title: '从进化心理学到AI',
+    desc: '一篇对进化心理学和AI话题的娱乐化演绎',
+  },
+]

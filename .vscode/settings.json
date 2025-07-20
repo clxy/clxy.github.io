@@ -1,12 +1,23 @@
 {
-  "html.format.wrapLineLength": 120,
-  "html.format.wrapAttributes": "preserve",
+  "editor.renderWhitespace": "all",
   "editor.formatOnSave": true,
-  "search.exclude": {
-    "**/*.min.*": true
+  "editor.formatOnPaste": true,
+  "editor.tabSize": 2,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "liveServer.settings.file": "index.html",
+  "liveServer.settings.root": "/dist",
+  "vue.format.wrapAttributes": "preserve",
+  "html.format.wrapAttributes": "preserve",
+  "javascript.format.semicolons": "remove",
+  "typescript.format.semicolons": "remove",
+  "files.associations": {
+    "*.css": "tailwindcss"
   },
   "cSpell.words": [
-    "coverflow",
-    "swiper"
-  ]
+    "autoresize",
+    "Nuxt"
+  ],
+  "editor.formatOnSaveMode": "modifications",
 }
