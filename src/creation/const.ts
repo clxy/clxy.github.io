@@ -21,7 +21,7 @@ export interface Work {
   cid: string
   ext: string
   title: string
-  description: string
+  desc: string
 }
 /**
  * File path assets/creation/
@@ -31,14 +31,14 @@ export interface Work {
 export const Works: Work[] = [
   {
     cid: 'yh-m-1', author: 'yh',
-    type: 'music', ext: 'wav',
-    title: '美妙的旋律',
-    description: '一首动听的音乐作品，展现了作者的音乐才华。',
+    type: 'music', ext: 'm4a',
+    title: '沉思',
+    desc: '2025年寒假录给奶奶的音乐作品',
   },
   {
     cid: 'gg-a-1', author: 'gg',
     type: 'article', ext: 'md',
     title: '从进化心理学到AI',
-    description: '一篇对进化心理学和AI话题的娱乐化演绎。',
+    desc: '一篇对进化心理学和AI话题的娱乐化演绎',
   },
 ]

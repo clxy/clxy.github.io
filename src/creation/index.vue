@@ -32,7 +32,7 @@ const findKeyword = ref<string>('')
 const data = computed(() =>
   Works
     .filter(work => (findType.value === 'all' || work.type === findType.value)
-      && (work.title.includes(findKeyword.value) || work.description.includes(findKeyword.value)))
+      && (work.title.includes(findKeyword.value) || work.desc.includes(findKeyword.value)))
     .map((work) => {
       const cType = CreationType[work.type]
       return {
