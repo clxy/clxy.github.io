@@ -7,6 +7,8 @@ import Pages from 'vite-plugin-pages'
 
 // https://vite.dev/config/
 export default defineConfig({
+  // base: '/',
+  build: { outDir: 'docs' },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'), // 方便引入

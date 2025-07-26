@@ -1,0 +1,1 @@
+import{b as e}from"./route-block-B_A1xBdJ.js";import{G as c,j as n,o as t}from"./index-BDXMJMAv.js";const o={};function r(f,s){return t(),n("div",null,"App")}typeof e=="function"&&e(o);const p=c(o,[["render",r]]);export{p as default};
