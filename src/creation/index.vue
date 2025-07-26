@@ -1,38 +1,42 @@
 <script setup lang="ts">
-import { ref, computed, h, resolveComponent } from 'vue'
-import { useRoute } from 'vue-router'
-import { CreationType, Works, type Work } from './const'
+import { ref, computed, h, resolveComponent, watch } from 'vue'
+import { useRoute, useRouter } from 'vue-router'
+import { CreationType, Works, type Work, typeOptions, authorOptions, type Option } from './const'
 
 import type { TableColumn } from '@nuxt/ui'
 
-// Map CreationType object to array of items
-const items = [
-  {
-    label: '全部',
-    value: 'all',
-    icon: ''
-  },
-  ...Object.entries(CreationType).map(([value, item]) => ({
-    label: item.name,
-    value,
-    icon: item.icon
-  }))
-]
-
-// Type
 const route = useRoute()
-const urlType = route.query.type?.toString()
-const findType = ref<string>(urlType || 'all')
-const icon = computed(() => items.find(item => item.value === findType.value)?.icon)
+const router = useRouter()
 
-// keyword
-const findKeyword = ref<string>('')
+// 过滤条件
+const filter = ref({
+  type: route.query.type?.toString() || 'all',
+  author: route.query.author?.toString() || '',
+  keyword: route.query.keyword?.toString() || ''
+})
+watch(filter, val => {
+  router.replace({
+    query: {
+      ...route.query,
+      type: val.type === 'all' ? undefined : val.type,
+      author: val.author || undefined,
+      keyword: val.keyword || undefined,
+    }
+  })
+}, { deep: true })
 
-// list data
+const typeIcon = computed(() => typeOptions.find(o => o.value === filter.value.type)?.icon)
+const authorOption = computed(() => authorOptions.find(o => o.value === filter.value.author))
+
+
+// 检索结果
 const data = computed(() =>
   Works
-    .filter(work => (findType.value === 'all' || work.type === findType.value)
-      && (work.title.includes(findKeyword.value) || work.desc.includes(findKeyword.value)))
+    .filter(work =>
+      (filter.value.type === 'all' || work.type === filter.value.type)
+      && (filter.value.author === 'all' || work.author.includes(filter.value.author))
+      && (work.title.includes(filter.value.keyword) || work.desc.includes(filter.value.keyword))
+    )
     .map((work) => {
       const cType = CreationType[work.type]
       return {
@@ -47,8 +51,9 @@ interface WorkColumn extends Work {
   icon: string
   color: string
 }
-
 const UButton = resolveComponent('UButton')
+const UAvatar = resolveComponent('UserAvatar')
+
 const columns: TableColumn<WorkColumn>[] = [
   {
     header: '#',
@@ -81,13 +86,19 @@ const columns: TableColumn<WorkColumn>[] = [
   {
     accessorKey: 'author',
     header: '作者',
-    cell: ({ row }) => `${row.getValue('author')}`,
     meta: {
       class: {
         th: 'w-30 text-center',
         td: 'text-center',
       },
     },
+    cell: ({ row }) => {
+      return h(
+        UAvatar,
+        { user: row.original.author, },
+        () => ''
+      )
+    }
   },
 ]
 
@@ -98,22 +109,26 @@ const columns: TableColumn<WorkColumn>[] = [
     <div>Creation</div>
 
     <UCard variant="subtle">
-      <!-- <template #header>
+      <!--
+      <template #header>
         <div class="text-left flex items-center gap-2">
           <UIcon name="i-mdi-magnify" />
         </div>
-      </template> -->
+      </template>
+      -->
       <div class="flex items-center justify-center gap-4">
-        <USelect v-model="findType" :items="items" class="w-48" :icon="icon" onchange="" />
-        <UInput placeholder="Search..." v-model="findKeyword">
-          <template v-if="findKeyword?.length" #trailing>
+        <USelect v-model="filter.author" :items="authorOptions" class="w-48"
+          :avatar="authorOption?.avatar" :icon="authorOption?.icon" />
+        <USelect v-model="filter.type" :items="typeOptions" class="w-48" :icon="typeIcon" />
+        <UInput placeholder="Search..." v-model="filter.keyword">
+          <template v-if="filter.keyword?.length" #trailing>
             <UButton
               color="neutral"
               variant="link"
               size="sm"
               icon="i-lucide-circle-x"
               aria-label="Clear input"
-              @click="findKeyword = ''" />
+              @click="filter.keyword = ''" />
           </template>
         </UInput>
         <!-- <UFormField label="Type">

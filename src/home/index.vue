@@ -2,6 +2,7 @@
 import { ref, onMounted, onUnmounted } from 'vue'
 import { CreationType } from '@/creation/const'
 
+
 // 定义背景图片列表
 const backgroundImages = [
   '/assets/intro-bg.jpg',
@@ -69,18 +70,18 @@ onMounted(() => {
     <UCard variant="subtle">
       <template #header>
         <UButton icon="i-mdi-app-badge-outline" to="/app" variant="link">
-          US
+          Us
         </UButton>
       </template>
       <div class="flex items-center justify-center gap-4">
         <ULink to="/creation?author=yh">
-          <UAvatar src="/assets/yh.png" size="3xl" />
+          <UserAvatar user="yh" size="3xl" />
         </ULink>
         <ULink to="/creation?author=mm">
-          <UAvatar src="/assets/mm.gif" size="3xl" />
+          <UserAvatar user="mm" size="3xl" />
         </ULink>
         <ULink to="/creation?author=gg">
-          <UAvatar src="/assets/gg.png" size="3xl" />
+          <UserAvatar user="gg" size="3xl" />
         </ULink>
       </div>
     </UCard>

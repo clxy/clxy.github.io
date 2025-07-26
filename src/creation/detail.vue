@@ -37,7 +37,10 @@ if (!work && urlId !== '404') {
               :color="CreationType[work.type]?.color" />
             <span>{{ work.title }}</span>
             <span class="flex-1 text-center text-gray-500 text-sm ml-2">{{ work.desc }}</span>
-            <span class="ml-auto text-sm text-gray-400">by {{ work.author }}</span>
+            <span class="ml-auto text-sm text-gray-400">
+              by
+              <UserAvatar :user="work.author" />
+            </span>
           </div>
         </template>
 
