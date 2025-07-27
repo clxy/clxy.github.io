@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, h, resolveComponent, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import { CreationType, Works, type Work, typeOptions, authorOptions, type Option } from './const'
+import { CreationType, Works, type Work, typeOptions, authorOptions, } from './const'
 
 import type { TableColumn } from '@nuxt/ui'
 
@@ -11,7 +11,7 @@ const router = useRouter()
 // 过滤条件
 const filter = ref({
   type: route.query.type?.toString() || 'all',
-  author: route.query.author?.toString() || '',
+  author: route.query.author?.toString() || 'all',
   keyword: route.query.keyword?.toString() || ''
 })
 watch(filter, val => {
@@ -19,7 +19,7 @@ watch(filter, val => {
     query: {
       ...route.query,
       type: val.type === 'all' ? undefined : val.type,
-      author: val.author || undefined,
+      author: val.author === 'all' ? undefined : val.author,
       keyword: val.keyword || undefined,
     }
   })

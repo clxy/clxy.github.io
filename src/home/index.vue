@@ -69,7 +69,7 @@ onMounted(() => {
 
     <UCard variant="subtle">
       <template #header>
-        <UButton icon="i-mdi-app-badge-outline" to="/app" variant="link">
+        <UButton icon="i-mdi-people-group-outline" to="/app" variant="link">
           Us
         </UButton>
       </template>
