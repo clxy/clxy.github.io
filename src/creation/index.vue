@@ -53,7 +53,7 @@ interface WorkColumn extends Work {
 }
 const UButton = resolveComponent('UButton')
 const UAvatar = resolveComponent('UserAvatar')
-
+const Comment = resolveComponent('Comment')
 const columns: TableColumn<WorkColumn>[] = [
   {
     header: '#',
@@ -84,21 +84,37 @@ const columns: TableColumn<WorkColumn>[] = [
     }
   },
   {
+    accessorKey: 'comment',
+    header: '讨论',
+    meta: {
+      class: {
+        th: 'w-20 text-center',
+        td: 'text-center',
+      },
+    },
+    cell: ({ row }) => h(
+      Comment,
+      {
+        id: row.original.cid,
+        url: `/creation/detail?id=${row.original.cid}`,
+        showCount: true
+      }
+    )
+  },
+  {
     accessorKey: 'author',
     header: '作者',
     meta: {
       class: {
-        th: 'w-30 text-center',
+        th: 'w-20 text-center',
         td: 'text-center',
       },
     },
-    cell: ({ row }) => {
-      return h(
-        UAvatar,
-        { user: row.original.author, },
-        () => ''
-      )
-    }
+    cell: ({ row }) => h(
+      UAvatar,
+      { user: row.original.author, },
+      () => ''
+    )
   },
 ]
 
@@ -115,7 +131,7 @@ const columns: TableColumn<WorkColumn>[] = [
           <UIcon name="i-mdi-magnify" />
         </div>
       </template>
-      -->
+-->
       <div class="flex items-center justify-center gap-4">
         <USelect v-model="filter.author" :items="authorOptions" class="w-48"
           :avatar="authorOption?.avatar" :icon="authorOption?.icon" />
