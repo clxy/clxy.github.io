@@ -41,6 +41,12 @@ export const Works: Work[] = [
     title: '从进化心理学到AI',
     desc: '一篇对进化心理学和AI话题的娱乐化演绎',
   },
+  {
+    cid: 'gg-a-2', author: 'gg',
+    type: 'article', ext: 'md',
+    title: '游戏项目企划概要书',
+    desc: '把自己知道的喂给2个AI，在合并生成的内容，得到怎么个样的概要书',
+  },
 ]
 
 export interface Option {
