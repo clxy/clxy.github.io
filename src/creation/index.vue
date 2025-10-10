@@ -45,6 +45,7 @@ const data = computed(() =>
         color: cType?.color || 'primary'
       } as WorkColumn
     })
+    .sort((a, b) => b.createdAt.localeCompare(a.createdAt))
 )
 
 interface WorkColumn extends Work {

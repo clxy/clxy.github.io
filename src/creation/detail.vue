@@ -68,6 +68,10 @@ if (!work && urlId !== '404') {
               <UIcon name="i-mdi-arrow-back" />
               Back
             </UButton>
+            <span class="flex-1"></span>
+            <span class="ml-auto text-sm text-gray-400">
+              At {{ work.createdAt }}
+            </span>
           </div>
         </template>
       </UCard>
