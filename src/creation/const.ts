@@ -10,6 +10,7 @@ export const CreationType: Record<string, CreationTypeItem> = {
   'article': { name: '文章', color: 'secondary', icon: 'i-mdi-quill', },
   'music': { name: '音乐', color: 'error', icon: 'i-mdi-music-note-eighth', },
   'painting': { name: '绘画', color: 'warning', icon: 'i-mdi-art', },
+  'game': { name: '游戏', color: 'success', icon: 'i-mdi-google-gamepad', },
 } as const
 
 /**
@@ -46,6 +47,12 @@ export const Works: Work[] = [
     type: 'article', ext: 'md',
     title: '游戏项目企划概要书',
     desc: '把自己知道的喂给2个AI，在合并生成的内容，得到怎么个样的概要书',
+  },
+  {
+    cid: 'yh-g-1', author: 'yh',
+    type: 'game', ext: 'html',
+    title: '躲避箭雨',
+    desc: 'scratch作品',
   },
 ]
 

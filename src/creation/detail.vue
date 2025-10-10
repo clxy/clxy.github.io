@@ -48,6 +48,9 @@ if (!work && urlId !== '404') {
           <template v-if="work.ext === 'md'">
             <MarkdownViewer :filePath="`${work.cid}.md`" />
           </template>
+          <template v-if="work.ext === 'html'">
+            <iframe :src="`/assets/creation/${work.cid}.html`" class="w-full h-96 border-0" />
+          </template>
           <template v-else-if="['wav', 'm4a'].includes(work.ext)">
             <audio :src="`/assets/creation/${work.cid}.${work.ext}`" controls style="width: 100%;" />
           </template>

@@ -155,7 +155,7 @@ const columns: TableColumn<WorkColumn>[] = [
       </template> -->
     </UCard>
     <UCard variant="subtle" class="mt-4">
-      <UTable sticky :data="data" class="flex max-h-[312px]" :columns="columns" />
+      <UTable sticky :data="data" class="flex h-[calc(100vh-15rem)] min-h-[300px]" :columns="columns" />
     </UCard>
   </UContainer>
 </template>
