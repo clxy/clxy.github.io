@@ -52,16 +52,24 @@ interface WorkColumn extends Work {
   icon: string
   color: string
 }
-const UButton = resolveComponent('UButton')
+
 const UAvatar = resolveComponent('UserAvatar')
+const UButton = resolveComponent('UButton')
+const UIcon = resolveComponent('UIcon')
 const Comment = resolveComponent('Comment')
+const createColumnHeader = (icon: string) => h(
+  'div',
+  { class: 'flex items-center justify-center gap-1' },
+  [h(UIcon, { name: icon, class: 'w-5 h-5' })]
+)
+
 const columns: TableColumn<WorkColumn>[] = [
   {
     header: '#',
     cell: ({ row }) => `${(row.index + 1)}`,
     meta: {
       class: {
-        td: 'w-16 whitespace-normal',
+        td: 'w-10 whitespace-normal',
       },
     },
   },
@@ -86,10 +94,10 @@ const columns: TableColumn<WorkColumn>[] = [
   },
   {
     accessorKey: 'comment',
-    header: '讨论',
+    header: () => createColumnHeader('i-mdi-comment-multiple'),
     meta: {
       class: {
-        th: 'w-20 text-center',
+        th: 'w-10 text-center',
         td: 'text-center',
       },
     },
@@ -104,10 +112,10 @@ const columns: TableColumn<WorkColumn>[] = [
   },
   {
     accessorKey: 'author',
-    header: '作者',
+    header: () => createColumnHeader('i-mdi-account'),
     meta: {
       class: {
-        th: 'w-20 text-center',
+        th: 'w-10 text-center',
         td: 'text-center',
       },
     },
@@ -116,6 +124,17 @@ const columns: TableColumn<WorkColumn>[] = [
       { user: row.original.author, },
       () => ''
     )
+  },
+  {
+    accessorKey: 'createdAt',
+    header: () => createColumnHeader('i-mdi-calendar-clock'),
+    meta: {
+      class: {
+        th: 'w-20 text-center',
+        td: 'text-center',
+      },
+    },
+    cell: ({ row }) => row.original.createdAt,
   },
 ]
 
@@ -156,7 +175,7 @@ const columns: TableColumn<WorkColumn>[] = [
       </template> -->
     </UCard>
     <UCard variant="subtle" class="mt-4">
-      <UTable sticky :data="data" class="flex h-[calc(100vh-15rem)] min-h-[300px]" :columns="columns" />
+      <UTable sticky :data="data" class="flex" :columns="columns" />
     </UCard>
   </UContainer>
 </template>
