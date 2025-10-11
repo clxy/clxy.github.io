@@ -1,6 +1,6 @@
-@import "tailwindcss" theme(static);
-@plugin "@tailwindcss/typography";
+@import "tailwindcss";
 @import "@nuxt/ui";
+@plugin "@tailwindcss/typography";
 
 /*
 @theme {
