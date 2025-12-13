@@ -59,6 +59,13 @@ export const Works: Work[] = [
     desc: 'Scratch作品',
     createdAt: '2025-10-10',
   },
+  {
+    cid: 'gg-p-1', author: 'gg',
+    type: 'painting', ext: 'png',
+    title: 'AI作图练习-浮空岛',
+    desc: 'Gemini辅助创作。虽然各种细节都不太对，但意思到了！',
+    createdAt: '2025-11-24',
+  },
 ]
 
 export interface Option {
