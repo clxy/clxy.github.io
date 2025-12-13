@@ -1,4 +1,7 @@
 # 从进化心理学到AI
+<div class="article-head-img">
+  <img src="/assets/creation/gg-p-gg-a-1.png"/>
+</div>
 
 ## 声明
 首先，这篇文章是非专业的，纯粹得不能再纯粹的娱乐向作品。\
