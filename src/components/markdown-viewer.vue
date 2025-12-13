@@ -12,7 +12,7 @@ const props = defineProps < {
 } > ()
 
 const htmlContent = ref('')
-const md = new MarkdownIt()
+const md = new MarkdownIt({ html: true, linkify: true })
 md.use(collapsible)
 
 onMounted(async () => {
@@ -30,7 +30,7 @@ onMounted(async () => {
 })
 </script>
 
-<style>
+<style scoped>
 summary {
   list-style: none;
   cursor: pointer;
@@ -62,9 +62,19 @@ details {
   margin-bottom: 0.25rem;
 }
 
+:deep(.article-head-img img) {
+  max-width: 50%;
+  border-radius: 0.375rem;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));
+}
 @media (prefers-color-scheme: dark) {
   details {
     border-color: #4b5563; /* Tailwind's dark:border-gray-600 */
   }
 }
+
 </style>
