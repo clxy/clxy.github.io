@@ -11,22 +11,22 @@
   },
   "dependencies": {
     "@giscus/vue": "^3.1.1",
-    "@nuxt/ui": "^4.0.1",
-    "@vueuse/core": "^13.9.0",
+    "@nuxt/ui": "^4.2.1",
+    "@vueuse/core": "^14.1.0",
     "markdown-it": "^14.1.0",
     "markdown-it-collapsible": "^2.0.2",
-    "vue": "^3.5.22",
-    "vue-router": "^4.5.1"
+    "vue": "^3.5.25",
+    "vue-router": "^4.6.4"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.19",
     "@types/markdown-it": "^14.1.2",
-    "@types/node": "^22.18.9",
-    "@vitejs/plugin-vue": "^6.0.1",
+    "@types/node": "^25.0.1",
+    "@vitejs/plugin-vue": "^6.0.3",
     "@vue/tsconfig": "^0.8.1",
     "typescript": "^5.9.3",
-    "vite": "^7.1.9",
-    "vite-plugin-pages": "^0.33.1",
-    "vue-tsc": "^3.1.1"
+    "vite": "^7.2.7",
+    "vite-plugin-pages": "^0.33.2",
+    "vue-tsc": "^3.1.8"
   }
 }
