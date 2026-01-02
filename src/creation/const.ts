@@ -53,6 +53,13 @@ export const Works: Work[] = [
     createdAt: '2025-08-10',
   },
   {
+    cid: 'gg-a-3', author: 'gg',
+    type: 'article', ext: 'md',
+    title: '从卢德运动到程序员和AI',
+    desc: '一篇对卢德运动和AI的思考',
+    createdAt: '2026-01-02',
+  },
+  {
     cid: 'yh-g-1', author: 'yh',
     type: 'game', ext: 'html',
     title: '躲避箭雨',
