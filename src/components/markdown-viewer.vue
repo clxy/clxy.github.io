@@ -62,6 +62,11 @@ details {
   margin-bottom: 0.25rem;
 }
 
+:deep(h2) {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.5rem;
+}
+
 :deep(.article-head-img img) {
   max-width: 50%;
   border-radius: 0.375rem;
