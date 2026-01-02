@@ -1,6 +1,6 @@
 # 从进化心理学到AI
 <div class="article-head-img">
-  <img src="/assets/creation/gg-p-gg-a-1.png"/>
+  <img src="/assets/creation/gg-a-1-p-1.png"/>
 </div>
 
 ## 声明
