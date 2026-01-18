@@ -1,1 +1,0 @@
-import{d as n,j as l,i as t,F as r,o as s}from"./index-C8EwgTsP.js";import{b as e}from"./route-block-B_A1xBdJ.js";const a=n({__name:"stock",setup(i){return(m,o)=>(s(),l(r,null,[o[0]||(o[0]=t("div",null,"Stock",-1)),o[1]||(o[1]=t("div",null,null,-1))],64))}});typeof e=="function"&&e(a);export{a as default};
