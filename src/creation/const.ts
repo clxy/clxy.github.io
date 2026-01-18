@@ -32,6 +32,41 @@ export interface Work {
  */
 export const Works: Work[] = [
   {
+    cid: 'gg-a-4', author: 'gg',
+    type: 'article', ext: 'md',
+    title: '神，涌现和AI',
+    desc: '涌现即道！一篇神神叨叨的思考',
+    createdAt: '2026-01-15',
+  },
+  {
+    cid: 'gg-a-3', author: 'gg',
+    type: 'article', ext: 'md',
+    title: '从卢德运动到程序员和AI',
+    desc: '一篇对卢德运动和AI的思考',
+    createdAt: '2026-01-02',
+  },
+  {
+    cid: 'gg-p-1', author: 'gg',
+    type: 'painting', ext: 'png',
+    title: 'AI作图练习-浮空岛',
+    desc: 'Gemini辅助创作。虽然各种细节都不太对，但意思到了！',
+    createdAt: '2025-11-24',
+  },
+  {
+    cid: 'yh-g-1', author: 'yh',
+    type: 'game', ext: 'html',
+    title: '躲避箭雨',
+    desc: 'Scratch作品',
+    createdAt: '2025-10-10',
+  },
+  {
+    cid: 'gg-a-2', author: 'gg',
+    type: 'article', ext: 'md',
+    title: '游戏项目企划概要书',
+    desc: '把自己知道的喂给2个AI，在合并生成的内容，得到怎么个样的概要书',
+    createdAt: '2025-08-10',
+  },
+  {
     cid: 'yh-m-1', author: 'yh',
     type: 'music', ext: 'm4a',
     title: '沉思',
@@ -44,34 +79,6 @@ export const Works: Work[] = [
     title: '从进化心理学到AI',
     desc: '一篇对进化心理学和AI话题的娱乐化演绎',
     createdAt: '2024-12-15',
-  },
-  {
-    cid: 'gg-a-2', author: 'gg',
-    type: 'article', ext: 'md',
-    title: '游戏项目企划概要书',
-    desc: '把自己知道的喂给2个AI，在合并生成的内容，得到怎么个样的概要书',
-    createdAt: '2025-08-10',
-  },
-  {
-    cid: 'gg-a-3', author: 'gg',
-    type: 'article', ext: 'md',
-    title: '从卢德运动到程序员和AI',
-    desc: '一篇对卢德运动和AI的思考',
-    createdAt: '2026-01-02',
-  },
-  {
-    cid: 'yh-g-1', author: 'yh',
-    type: 'game', ext: 'html',
-    title: '躲避箭雨',
-    desc: 'Scratch作品',
-    createdAt: '2025-10-10',
-  },
-  {
-    cid: 'gg-p-1', author: 'gg',
-    type: 'painting', ext: 'png',
-    title: 'AI作图练习-浮空岛',
-    desc: 'Gemini辅助创作。虽然各种细节都不太对，但意思到了！',
-    createdAt: '2025-11-24',
   },
 ]
 
