@@ -32,6 +32,13 @@ export interface Work {
  */
 export const Works: Work[] = [
   {
+    cid: 'gg-a-5', author: 'gg',
+    type: 'article', ext: 'md',
+    title: '智能＝记忆＋推理？',
+    desc: '我对智能的理解，也是我对AI的期望',
+    createdAt: '2026-01-15',
+  },
+  {
     cid: 'gg-a-4', author: 'gg',
     type: 'article', ext: 'md',
     title: '神，涌现和AI',
