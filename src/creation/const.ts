@@ -32,11 +32,18 @@ export interface Work {
  */
 export const Works: Work[] = [
   {
+    cid: 'gg-a-6', author: 'gg',
+    type: 'article', ext: 'md',
+    title: '特么到底算谁的？',
+    desc: '我的，我的，我的 ... by 海鸥@海底总动员',
+    createdAt: '2026-03-01',
+  },
+  {
     cid: 'gg-a-5', author: 'gg',
     type: 'article', ext: 'md',
     title: '智能＝记忆＋推理？',
     desc: '我对智能的理解，也是我对AI的期望',
-    createdAt: '2026-01-15',
+    createdAt: '2026-02-23',
   },
   {
     cid: 'gg-a-4', author: 'gg',
