@@ -33,9 +33,10 @@ if (!work && urlId !== '404') {
       <UCard variant="subtle">
         <template #header>
           <div class="flex items-center gap-2">
-            <UIcon :name="CreationType[work.type]?.icon"
-              :color="CreationType[work.type]?.color" />
-            <span>{{ work.title }}</span>
+            <UButton to="/creation">
+              <UIcon name="i-mdi-arrow-back" />
+              Back
+            </UButton>
             <span class="flex-1 text-center text-gray-500 text-sm ml-2">{{ work.desc }}</span>
             <span class="ml-auto text-sm text-gray-400">
               by
@@ -68,7 +69,12 @@ if (!work && urlId !== '404') {
               <UIcon name="i-mdi-arrow-back" />
               Back
             </UButton>
-            <span class="flex-1"></span>
+
+            <span class="flex-1 inline-flex items-center justify-center gap-1 text-gray-500 text-sm ml-2">
+              <UIcon :name="CreationType[work.type]?.icon" :color="CreationType[work.type]?.color" class="w-5 h-5" />
+              <span>{{ work.title }}</span>
+            </span>
+
             <span class="ml-auto text-sm text-gray-400">
               At {{ work.createdAt }}
             </span>
