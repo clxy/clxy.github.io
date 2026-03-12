@@ -54,16 +54,16 @@ const slideoverState = ref(false)
 
 <template>
   <header
-    class="sticky top-0 z-50 border-b border-(--ui-border) bg-(--ui-bg)/75 backdrop-blur justify-between flex">
+    class="sticky top-0 z-50 border-b border-(--ui-border) bg-(--ui-bg)/75 backdrop-blur justify-between flex items-center">
 
-    <div class="flex justify-between h-(--ui-header-height) my-3">
+    <div class="flex items-center justify-between h-(--ui-header-height)">
       <Logo />
     </div>
 
     <UNavigationMenu
       orientation="horizontal"
       :items="hMenuItems"
-      class="hidden md:flex justify-between h-(--ui-header-height)">
+      class="hidden md:flex items-center justify-between h-(--ui-header-height)">
     </UNavigationMenu>
 
     <div class="flex items-center justify-between h-(--ui-header-height)">

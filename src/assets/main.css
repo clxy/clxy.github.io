@@ -2,6 +2,10 @@
 @import "@nuxt/ui";
 @plugin "@tailwindcss/typography";
 
+:root {
+  --ui-header-height: 4rem;
+}
+
 /*
 @theme {
   --color-green-50: #effdf5;
