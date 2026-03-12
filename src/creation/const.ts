@@ -32,6 +32,13 @@ export interface Work {
  */
 export const Works: Work[] = [
   {
+    cid: 'gg-a-7', author: 'gg',
+    type: 'article', ext: 'md',
+    title: '氛围编程？编毛咧！',
+    desc: '氛围编程其实是程序员们在为将来的自己挖坑 ... 😂',
+    createdAt: '2026-03-06',
+  },
+  {
     cid: 'gg-a-6', author: 'gg',
     type: 'article', ext: 'md',
     title: '特么到底算谁的？',
