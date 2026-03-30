@@ -1,1 +1,0 @@
-import{b as e}from"./route-block-B_A1xBdJ.js";import{H as c,o as n,k as t}from"./index-BXU_64dm.js";const o={};function r(f,s){return n(),t("div",null,"App")}typeof e=="function"&&e(o);const p=c(o,[["render",r]]);export{p as default};
