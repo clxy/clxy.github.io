@@ -46,7 +46,7 @@ summary::after {
   content: "▶";
   display: inline-block;
   margin-left: 1rem;
-  transition: transform 0.2s ease;
+  transition: transform 0.5s ease;
 }
 
 details[open] summary::after {
@@ -68,7 +68,7 @@ details {
 }
 
 :deep(.article-head-img img) {
-  max-width: 50%;
+  max-width: 80%;
   border-radius: 0.375rem;
   height: auto;
   display: block;
@@ -76,6 +76,17 @@ details {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
   filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));
 }
+
+:deep(.article-video video) {
+  max-width: 80%;
+  border-radius: 0.375rem;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.18));
+}
+
 @media (prefers-color-scheme: dark) {
   details {
     border-color: #4b5563; /* Tailwind's dark:border-gray-600 */

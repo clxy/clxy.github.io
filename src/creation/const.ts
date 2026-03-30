@@ -32,6 +32,13 @@ export interface Work {
  */
 export const Works: Work[] = [
   {
+    cid: 'gg-p-2', author: 'gg',
+    type: 'painting', ext: 'md',
+    title: '静态画添加动态效果！',
+    desc: '用Seedance2给静态画添加动态效果',
+    createdAt: '2026-03-24',
+  },
+  {
     cid: 'gg-a-7', author: 'gg',
     type: 'article', ext: 'md',
     title: '氛围编程？编毛咧！',
