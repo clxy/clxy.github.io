@@ -1,0 +1,365 @@
+{
+  "version": "2.9",
+  "children": [
+    {
+      "type": "frame",
+      "id": "UAZJ2",
+      "x": 0,
+      "y": 0,
+      "name": "Route Player",
+      "width": 1440,
+      "height": 900,
+      "fill": {
+        "type": "image",
+        "enabled": true,
+        "url": "./images/generated-1775050144586.png",
+        "mode": "fill"
+      },
+      "layout": "none",
+      "children": [
+        {
+          "type": "path",
+          "id": "eE1dd",
+          "x": 300,
+          "y": 200,
+          "name": "path1",
+          "geometry": "M0 400l150-200 200-50 150-150",
+          "width": 500,
+          "height": 400,
+          "stroke": {
+            "thickness": 6,
+            "join": "round",
+            "cap": "round",
+            "fill": "#3B82F6"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "lLxbS",
+          "x": 288,
+          "y": 588,
+          "name": "p1start",
+          "fill": "#ffffff",
+          "width": 24,
+          "height": 24,
+          "stroke": {
+            "thickness": 6,
+            "fill": "#3B82F6"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "5Pa3N",
+          "x": 442,
+          "y": 392,
+          "name": "p1mid1",
+          "fill": "#ffffff",
+          "width": 16,
+          "height": 16,
+          "stroke": {
+            "thickness": 4,
+            "fill": "#3B82F6"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "S6yne",
+          "x": 642,
+          "y": 342,
+          "name": "p1mid2",
+          "fill": "#ffffff",
+          "width": 16,
+          "height": 16,
+          "stroke": {
+            "thickness": 4,
+            "fill": "#3B82F6"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "OlpND",
+          "x": 784,
+          "y": 184,
+          "name": "p1end",
+          "fill": "#3B82F6",
+          "width": 32,
+          "height": 32,
+          "stroke": {
+            "thickness": 8,
+            "fill": "#DBEAFE"
+          }
+        },
+        {
+          "type": "path",
+          "id": "G6Veo",
+          "x": 600,
+          "y": 200,
+          "name": "path2",
+          "geometry": "M400 500l-150-100-150-150-100-250",
+          "width": 400,
+          "height": 500,
+          "stroke": {
+            "thickness": 6,
+            "join": "round",
+            "cap": "round",
+            "fill": "#EF4444"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "jnwxR",
+          "x": 988,
+          "y": 688,
+          "name": "p2start",
+          "fill": "#ffffff",
+          "width": 24,
+          "height": 24,
+          "stroke": {
+            "thickness": 6,
+            "fill": "#EF4444"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "VLh8P",
+          "x": 842,
+          "y": 592,
+          "name": "p2mid1",
+          "fill": "#ffffff",
+          "width": 16,
+          "height": 16,
+          "stroke": {
+            "thickness": 4,
+            "fill": "#EF4444"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "fQVH2",
+          "x": 692,
+          "y": 442,
+          "name": "p2mid2",
+          "fill": "#ffffff",
+          "width": 16,
+          "height": 16,
+          "stroke": {
+            "thickness": 4,
+            "fill": "#EF4444"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "tT3bJ",
+          "x": 584,
+          "y": 184,
+          "name": "p2end",
+          "fill": "#EF4444",
+          "width": 32,
+          "height": 32,
+          "stroke": {
+            "thickness": 8,
+            "fill": "#FEE2E2"
+          }
+        },
+        {
+          "type": "path",
+          "id": "KdNDT",
+          "x": 200,
+          "y": 500,
+          "name": "path3",
+          "geometry": "M0 0l200 150 150 50 150 50",
+          "width": 500,
+          "height": 250,
+          "stroke": {
+            "thickness": 6,
+            "join": "round",
+            "cap": "round",
+            "fill": "#F59E0B"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "b2SIX",
+          "x": 188,
+          "y": 488,
+          "name": "p3start",
+          "fill": "#ffffff",
+          "width": 24,
+          "height": 24,
+          "stroke": {
+            "thickness": 6,
+            "fill": "#F59E0B"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "3Bsm7",
+          "x": 392,
+          "y": 642,
+          "name": "p3mid1",
+          "fill": "#ffffff",
+          "width": 16,
+          "height": 16,
+          "stroke": {
+            "thickness": 4,
+            "fill": "#F59E0B"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "BZ5an",
+          "x": 542,
+          "y": 692,
+          "name": "p3mid2",
+          "fill": "#ffffff",
+          "width": 16,
+          "height": 16,
+          "stroke": {
+            "thickness": 4,
+            "fill": "#F59E0B"
+          }
+        },
+        {
+          "type": "ellipse",
+          "id": "lk1gs",
+          "x": 684,
+          "y": 734,
+          "name": "p3end",
+          "fill": "#F59E0B",
+          "width": 32,
+          "height": 32,
+          "stroke": {
+            "thickness": 8,
+            "fill": "#FEF3C7"
+          }
+        },
+        {
+          "type": "frame",
+          "id": "Jgl09",
+          "x": 270,
+          "y": 780,
+          "name": "toolbarBg",
+          "width": 900,
+          "height": 80,
+          "fill": "#ffffff",
+          "cornerRadius": 40,
+          "effect": {
+            "type": "shadow",
+            "shadowType": "outer",
+            "color": "#0000001a",
+            "offset": {
+              "x": 0,
+              "y": 8
+            },
+            "blur": 24
+          },
+          "gap": 32,
+          "padding": [
+            0,
+            40
+          ],
+          "justifyContent": "center",
+          "alignItems": "center",
+          "children": [
+            {
+              "type": "icon_font",
+              "id": "6aZ98",
+              "name": "playBtn",
+              "width": 32,
+              "height": 32,
+              "iconFontName": "play",
+              "iconFontFamily": "lucide",
+              "fill": "#111827"
+            },
+            {
+              "type": "icon_font",
+              "id": "slt6W",
+              "name": "stopBtn",
+              "width": 24,
+              "height": 24,
+              "iconFontName": "square",
+              "iconFontFamily": "lucide",
+              "fill": "#4B5563"
+            },
+            {
+              "type": "frame",
+              "id": "65Ljt",
+              "name": "progressWrapper",
+              "width": 600,
+              "gap": 16,
+              "alignItems": "center",
+              "children": [
+                {
+                  "type": "frame",
+                  "id": "EzGTZ",
+                  "name": "trackContainer",
+                  "width": 600,
+                  "height": 21,
+                  "layout": "none",
+                  "children": [
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 4,
+                      "id": "ddCAf",
+                      "x": 0,
+                      "y": 6,
+                      "name": "trackBg",
+                      "fill": "#E5E7EB",
+                      "width": 600,
+                      "height": 8
+                    },
+                    {
+                      "type": "rectangle",
+                      "cornerRadius": 4,
+                      "id": "n009L",
+                      "x": 0,
+                      "y": 6,
+                      "name": "trackFill",
+                      "fill": "#3B82F6",
+                      "width": 200,
+                      "height": 8
+                    },
+                    {
+                      "type": "ellipse",
+                      "id": "erqyC",
+                      "x": 190,
+                      "y": 0,
+                      "name": "trackKnob",
+                      "fill": "#ffffff",
+                      "width": 20,
+                      "height": 20,
+                      "stroke": {
+                        "thickness": 2,
+                        "fill": "#3B82F6"
+                      },
+                      "effect": {
+                        "type": "shadow",
+                        "shadowType": "outer",
+                        "color": "#00000026",
+                        "offset": {
+                          "x": 0,
+                          "y": 2
+                        },
+                        "blur": 4
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "icon_font",
+              "id": "dMFjM",
+              "name": "settingsBtn",
+              "width": 24,
+              "height": 24,
+              "iconFontName": "settings",
+              "iconFontFamily": "lucide",
+              "fill": "#111827"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
