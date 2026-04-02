@@ -89,4 +89,5 @@ name: Stock
 meta:
   title: Stock
   icon: i-mdi-chart-finance
+  color: info
 </route>

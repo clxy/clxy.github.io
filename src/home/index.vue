@@ -62,6 +62,8 @@ onMounted(() => {
         </UButton>
       </template>
       <div class="flex items-center justify-center gap-4">
+        <UButton icon="i-mdi-map-marker-path" size="xl" color="secondary" variant="outline"
+          to="/app/wof" />
         <UButton icon="i-mdi-chart-finance" size="xl" color="secondary" variant="outline"
           to="/app/stock" />
       </div>
