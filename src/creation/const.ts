@@ -39,6 +39,13 @@ export const Works: Work[] = [
     createdAt: '2026-03-24',
   },
   {
+    cid: 'gg-a-8', author: 'gg',
+    type: 'article', ext: 'md',
+    title: '氛围编程之毛1：AI辅助UI设计',
+    desc: 'Antigravity + Pencil MCP',
+    createdAt: '2026-04-02',
+  },
+  {
     cid: 'gg-a-7', author: 'gg',
     type: 'article', ext: 'md',
     title: '氛围编程？编毛咧！',
