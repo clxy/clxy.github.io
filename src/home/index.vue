@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from 'vue'
 import { CreationType } from '@/creation/const'
+import { AppList } from '@/app/const'
 
 
 // 定义背景图片列表
@@ -62,10 +63,15 @@ onMounted(() => {
         </UButton>
       </template>
       <div class="flex items-center justify-center gap-4">
-        <UButton icon="i-mdi-map-marker-path" size="xl" color="secondary" variant="outline"
-          to="/app/wof" />
-        <UButton icon="i-mdi-chart-finance" size="xl" color="secondary" variant="outline"
-          to="/app/stock" />
+        <UButton
+          v-for="(app, index) in AppList"
+          :key="index"
+          :icon="app.icon"
+          :color="app.color"
+          :to="app.path"
+          :title="app.name"
+          variant="outline"
+          size="xl" />
       </div>
     </UCard>
 
