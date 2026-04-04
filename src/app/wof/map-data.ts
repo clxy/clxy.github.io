@@ -1,6 +1,6 @@
 import * as turf from '@turf/turf'
 
-export interface MapDataPoint {
+export interface MapPoint {
   /** 标题 */
   title: string
 
@@ -17,12 +17,12 @@ export interface MapDataPoint {
   isReal?: boolean
 }
 
-export class MapDataLine {
+export class MapLine {
   title: string
-  list: MapDataPoint[]
+  list: MapPoint[]
   order: number
 
-  constructor(title: string = '', list: MapDataPoint[] = [], order: number = 0) {
+  constructor(title: string = '', list: MapPoint[] = [], order: number = 0) {
     this.title = title
     this.list = list
     this.order = order
@@ -31,7 +31,7 @@ export class MapDataLine {
   /**
    * 修复路径
    */
-  public fix(): MapDataLine {
+  public fix(): MapLine {
     const list = this.list
 
     for (let i = 0, len = list.length; i < len; i++) {
@@ -56,8 +56,8 @@ export class MapDataLine {
    * @param current 当前点
    * @param next 下一个点
    */
-  private fixStepItem(current: MapDataPoint, next: MapDataPoint): MapDataPoint[] {
-    const newList: MapDataPoint[] = []
+  private fixStepItem(current: MapPoint, next: MapPoint): MapPoint[] {
+    const newList: MapPoint[] = []
 
     const steps = current.stepsToNext || 1
     if (steps <= 1) return newList

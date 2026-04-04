@@ -71,10 +71,10 @@
 import { ref, onMounted, onUnmounted, watch, shallowRef } from 'vue'
 import maplibregl from 'maplibre-gl'
 import 'maplibre-gl/dist/maplibre-gl.css'
-import type { MapDataLine } from './map-data'
+import type { MapLine } from './map-data'
 
 const props = defineProps<{
-  lines: MapDataLine[]
+  lines: MapLine[]
 }>()
 
 const mapContainer = shallowRef<HTMLElement | null>(null)
