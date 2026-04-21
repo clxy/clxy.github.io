@@ -1,1 +1,0 @@
-import{P as e,p as t}from"./vue.runtime.esm-bundler-DprDonj4.js";import{t as n}from"./index-D6rA2etn.js";import{t as r}from"./route-block-DjMkMevx.js";var i={};function a(n,r){return e(),t(`div`,null,`App`)}typeof r==`function`&&r(i);var o=n(i,[[`render`,a]]);export{o as default};

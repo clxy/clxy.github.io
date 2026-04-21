@@ -1,0 +1,1 @@
+import{i as e}from"./index-CNsEXrB9.js";var t=e.find(e=>e.path===`/app`)?.children?.map(e=>(console.log(`route`,e),{name:e.meta?.title,icon:e.meta?.icon,color:e.meta?.color,path:e.path}))||[];export{t};

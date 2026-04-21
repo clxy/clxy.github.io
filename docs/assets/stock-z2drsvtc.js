@@ -1,1 +1,0 @@
-import{P as e,_ as t,o as n,p as r,u as i}from"./vue.runtime.esm-bundler-DprDonj4.js";import{t as a}from"./route-block-DjMkMevx.js";var o=t({__name:`stock`,setup(t){return(t,a)=>(e(),r(n,null,[a[0]||=i(`div`,null,`Stock`,-1),a[1]||=i(`div`,null,null,-1)],64))}});typeof a==`function`&&a(o);var s=o;export{s as default};
