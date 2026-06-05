@@ -8,7 +8,31 @@ import Pages from 'vite-plugin-pages'
 // https://vite.dev/config/
 export default defineConfig({
   // base: '/',
-  build: { outDir: 'docs' },
+  build: {
+    outDir: 'docs',
+    chunkSizeWarningLimit: 500,
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules/vue') || id.includes('node_modules/@vue') || id.includes('node_modules/vue-router')) {
+            return 'vendor-vue'
+          }
+          if (id.includes('node_modules/@nuxt/ui')) {
+            return 'vendor-ui'
+          }
+          if (id.includes('node_modules/@vueuse')) {
+            return 'vendor-vueuse'
+          }
+          if (id.includes('node_modules/markdown-it')) {
+            return 'vendor-md'
+          }
+          if (id.includes('node_modules/giscus')) {
+            return 'vendor-giscus'
+          }
+        }
+      }
+    }
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'), // 方便引入

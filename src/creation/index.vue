@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, h, resolveComponent, watch } from 'vue'
+import { ref, computed, h, resolveComponent, watch, defineAsyncComponent } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { CreationType, Works, type Work, typeOptions, authorOptions, } from './const'
 
@@ -56,7 +56,7 @@ interface WorkColumn extends Work {
 const UAvatar = resolveComponent('UserAvatar')
 const UButton = resolveComponent('UButton')
 const UIcon = resolveComponent('UIcon')
-const Comment = resolveComponent('Comment')
+const Comment = defineAsyncComponent(() => import('@/components/comment.vue'))
 const createColumnHeader = (icon: string) => h(
   'div',
   { class: 'flex items-center justify-center gap-1' },

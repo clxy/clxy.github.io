@@ -1,8 +1,10 @@
 <script setup lang="ts">
+import { defineAsyncComponent } from 'vue'
 import MarkdownViewer from '@/components/markdown-viewer.vue'
 import { useRoute, useRouter, } from 'vue-router'
 import { CreationType, Works, } from './const'
-import Comment from '@/components/comment.vue'
+
+const Comment = defineAsyncComponent(() => import('@/components/comment.vue'))
 
 const route = useRoute()
 const urlId = route.query.id?.toString()
