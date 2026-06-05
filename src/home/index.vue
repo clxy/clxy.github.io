@@ -62,7 +62,7 @@ onMounted(() => {
           App
         </UButton>
       </template>
-      <div class="flex items-center justify-center gap-4">
+      <div v-if="AppList.length" class="flex items-center justify-center gap-4">
         <UButton
           v-for="(app, index) in AppList"
           :key="index"
@@ -72,6 +72,9 @@ onMounted(() => {
           :title="app.name"
           variant="outline"
           size="xl" />
+      </div>
+      <div v-else class="flex items-center justify-center">
+        <span class="text-gray-400">None</span>
       </div>
     </UCard>
 
